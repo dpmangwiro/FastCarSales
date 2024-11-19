@@ -1,0 +1,61 @@
+﻿@page "/deletepost/{postid:int}"
+
+@using System.Globalization
+
+@inherits DeletePostBase
+
+@if (MyPostView is null || (MyPostView is not null && MyPostView.Car.Id ==  0))
+{
+
+	<p>Loading...</p>
+}
+else
+{
+	<h3 class="text-center my-4">Are you sure you want to delete this post?</h3>
+	<div class="row text-center">
+		<div class="col-md-8 offset-md-2">
+			<table class="table table-striped table-bordered my-3">
+				<thead>
+					<tr>
+						<th> Make </th>
+						<th> Model </th>
+						<th> Year </th>
+						<th> Price </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>@MyPostView!.Car.Make</td>
+						<td>@MyPostView.Car.CarModel.Name</td>
+						<td>@MyPostView.Car.Year</td>
+						<td>$@MyPostView.Car.Price.ToString("N", CultureInfo.InvariantCulture).Replace(".00", string.Empty)</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-6 offset-md-3">
+			<img src="@MyPostView.Car.CoverImage" class="img-fluid rounded" alt="@MyPostView.Car.Make @MyPostView.Car.CarModel.Name @MyPostView.Car.Year">
+		</div>		
+	</div>	
+	
+	<div class="d-flex justify-content-center my-3">
+		<div class="mx-2">
+			<Button Class="btn btn-danger" @onclick="DeletePost">Delete</Button>
+		</div>
+		<div class="mx-2">
+			@if (UserIsAdmin)
+			{
+				<a href="/allposts" class="btn btn-dark">Cancel</a>
+			}
+			else
+			{
+				<a href="/mine" class="btn btn-dark">Cancel</a>
+			}
+
+		</div>
+	</div>
+
+	<hr class="my-3" />
+	
+	
+}

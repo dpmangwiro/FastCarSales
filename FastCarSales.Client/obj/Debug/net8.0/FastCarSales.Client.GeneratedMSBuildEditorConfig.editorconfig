@@ -1,0 +1,119 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = FastCarSales.Client
+build_property.RootNamespace = FastCarSales.Client
+build_property.ProjectDir = C:\dp\FastCarSales\FastCarSales.Client\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\dp\FastCarSales\FastCarSales.Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Layout/FastCarSalesFooter.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEZhc3RDYXJTYWxlc0Zvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Auth.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/ImageUploader.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW1hZ2VVcGxvYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Posts/Admin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdHNcQWRtaW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Posts/AllPosts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdHNcQWxsUG9zdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Posts/CreatePost.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdHNcQ3JlYXRlUG9zdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Posts/DeletePost.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdHNcRGVsZXRlUG9zdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Posts/EditPost.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdHNcRWRpdFBvc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Posts/Karusel.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdHNcS2FydXNlbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Posts/Mine.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdHNcTWluZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Posts/ResultsPane.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdHNcUmVzdWx0c1BhbmUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Posts/SearchAndResults.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdHNcU2VhcmNoQW5kUmVzdWx0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Posts/SearchPane.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdHNcU2VhcmNoUGFuZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Posts/SinglePostView.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdHNcU2luZ2xlUG9zdFZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/Posts/Sorting.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdHNcU29ydGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/SelectExample.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VsZWN0RXhhbXBsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Pages/TestComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVkaXJlY3RUb0xvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Um91dGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dp/FastCarSales/FastCarSales.Client/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-kxvthqeny2
+
+[C:/dp/FastCarSales/FastCarSales.Client/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-3wvkqebl7b
+
+[C:/dp/FastCarSales/FastCarSales.Client/Layout/TopNavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XFRvcE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-kqpyvozxdx

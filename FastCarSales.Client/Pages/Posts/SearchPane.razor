@@ -1,0 +1,149 @@
+﻿@page "/search"
+
+@inherits SearchPaneBase
+
+
+@if (SearchModel is null )
+{
+	<div>
+		<p>Loading...</p>
+	</div>
+}
+else
+{
+	<EditForm Model="SearchModel" OnValidSubmit="SearchButtonClicked" class="col-md-6 offset-md-3">
+		<h2 class="heading-margin text-center"><i>Car Search</i></h2>
+
+		<DataAnnotationsValidator></DataAnnotationsValidator>
+		<ValidationSummary />
+
+		<div class="row mb-4">
+			<div class="col">
+				<label for="@SearchModel.TextSearchTerm" class="form-label">Text Search</label>
+				<InputText @bind-Value="@SearchModel.TextSearchTerm" class="form-control" placeholder="Mercedes, Mercedes S-Class, Golf 5 GTI, etc..." />
+
+			</div>
+		</div>
+		<div class="row mb-4">
+			<div class="row">
+				<label for="@SearchModel.FromYear" class="form-label">Year:</label>
+			</div>
+			<div class="col-md-4 mt-1">
+				<InputNumber TValue="int?" @bind-Value="@SearchModel.FromYear" class="form-control" placeholder="From Year" />
+				<ValidationMessage For="@(() => SearchModel.FromYear)" class="small text-danger" />				
+			</div>
+			<div class="col-md-4 mt-1">
+				<InputNumber TValue="int?" @bind-Value="@SearchModel.ToYear" class="form-control" placeholder="To year" />
+				<ValidationMessage For="@(() => SearchModel.ToYear)" class="small text-danger" />
+			</div>
+		</div>
+		<div class="row mb-4">
+			<div class="row">
+				<label for="@SearchModel.MinEngineCapacity" class="form-label">Engine Capacity:</label>
+			</div>
+			<div class="col-md-4 mt-1">
+				<InputNumber TValue="decimal?" @bind-Value="@SearchModel.MinEngineCapacity" class="form-control" placeholder="Min" />
+				<ValidationMessage For="@(() => SearchModel.MinEngineCapacity)" class="small text-danger" />
+			</div>
+			<div class="col-md-4 mt-1">
+				<InputNumber TValue="decimal?"  @bind-Value="@SearchModel.MaxEngineCapacity" class="form-control" placeholder="Max" />
+				<ValidationMessage For="@(() => SearchModel.MaxEngineCapacity)" class="small text-danger" />
+			</div>
+		</div>
+		<div class="row mb-4">
+			<div class="col-md-4 mt-1">
+				<label for="@SearchModel.MinPrice" class="form-label">Min Price</label>
+				<InputNumber TValue="decimal?" @bind-Value="@SearchModel.MinPrice" class="form-control" placeholder="$" />
+				<ValidationMessage For="@(() => SearchModel.MinPrice)" class="small text-danger" />
+			</div>
+			<div class="col-md-4 mt-1">
+				<label for="@SearchModel.MaxPrice" class="form-label">Max Price</label>
+				<InputNumber TValue="decimal?" @bind-Value="@SearchModel.MaxPrice" class="form-control" placeholder="$" />
+				<ValidationMessage For="@(() => SearchModel.MaxPrice)" class="small text-danger" />
+			</div>
+		</div>
+		@* <hr class="my-4" /> *@
+		@* <h5 class="my-3 text-center">Body Type:</h5>
+		<div class="row">
+			<div class="col">
+				@foreach (var bodyType in PostDictionary.BodyTypes)
+				{
+					<div class="form-check form-check-inline m-2">
+						<input id="category_@bodyType.Id"
+							   class="form-check-input"
+							   type="checkbox"
+							   name="SelectedCategoriesIds"
+							   value="@bodyType.Id"
+							   checked="@(SearchModel.SelectedBodyTypeIDs.Contains(bodyType.Id) ? true : false )" />
+						<label class="form-check-label" for="category_@bodyType.Id">@bodyType.Name</label>
+					</div>
+				}
+			</div>
+		</div>
+		<hr class="my-4" />
+		<h5 class="mb-3 text-center">Fuel Type:</h5>
+		<div class="row">
+			<div class="col">
+				@foreach (var fuelType in PostDictionary.FuelTypes)
+				{
+					<div class="form-check form-check-inline m-2">
+						<input id="fuelType_@fuelType.Id"
+							   class="form-check-input"
+							   type="checkbox"
+							   name="SelectedFuelTypesIds"
+							   value="@fuelType.Id"
+							   checked="@(() => BoolFuelTypeCheck(fuelType.Id))"  />
+						<label class="form-check-label" for="fuelType_@fuelType.Id">@fuelType.Name</label>
+					</div>
+				}
+			</div>
+		</div> 
+		<hr class="my-4" />
+		<h5 class="mb-3 text-center">Transmission Type:</h5>
+		<div class="row">
+			<div class="col">
+				@foreach (var transmissionType in PostDictionary.TransmissionTypes)
+				{
+					<div class="form-check form-check-inline m-2">
+						<input id="transmissionType_@transmissionType.Id"
+							   class="form-check-input"
+							   type="checkbox"
+							   name="SelectedTransmissionTypesIds"
+							   value="@transmissionType.Id"
+							   checked="@(SearchModel.SelectedTransmissionTypesIds.Contains(transmissionType.Id))"  />
+						<label class="form-check-label" for="transmissionType_@transmissionType.Id">@transmissionType.Name</label>
+					</div>
+				}
+			</div>
+	</div>*@
+		@* <hr class="my-4" /> *@
+	@* 	<h5 class="mb-1 text-center">Car extras:</h5> *@
+		@*  <div class="row">
+	<div class="col">
+	@foreach (var carExtra in Model.Car.CarExtras)
+	{
+	@if (!extraTypes.ContainsKey(carExtra.TypeId))
+	{
+	extraTypes[carExtra.TypeId] = carExtra.TypeName;
+	<div class="mb-2 mt-3"><h6>@carExtra.TypeName</h6></div>
+	}
+
+	<div class="form-check-inline mb-2">
+	<input id="extra_@carExtra.Id"
+	class="form-check-input"
+	type="checkbox"
+	name="SelectedExtrasIds"
+	value="@carExtra.Id"
+	@(Model.SelectedExtrasIds.Contains(carExtra.Id) ? "checked" : "" )>
+	<label class="form-check-label" for="extra_@carExtra.Id">@carExtra.Name</label>
+	</div>
+	}
+	</div>
+	</div> *@
+		<hr />
+		@* <div align="center"><input type="submit" class="btn btn-dark col-4" @onclick="SearchButtonClicked" /></div> *@
+		<div class="d-flex justify-content-center">
+			<Button Type="ButtonType.Submit" Class="btn btn-dark">Submit</Button>
+		</div>
+	</EditForm>
+}

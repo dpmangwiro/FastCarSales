@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FastCarSales.Data.Dtos\FastCarSales.Data.Dtos.csproj" />
+    <ProjectReference Include="..\FastCarSales.Data.Models\FastCarSales.Data.Models.csproj" />
+    <ProjectReference Include="..\FastCarSales.Data\FastCarSales.Data.csproj" />
+  </ItemGroup>
+
+</Project>

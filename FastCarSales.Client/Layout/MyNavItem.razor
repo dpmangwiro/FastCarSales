@@ -1,0 +1,36 @@
+﻿@if (!IsForm)
+{
+    <NavLink class="nav-link" href="@Href">
+        <Icon Name="@IconName" /> @Text
+    </NavLink>
+}
+else
+{
+    <form action="@FormAction" method="@FormMethod">
+        <AntiforgeryToken />
+        @if (ReturnUrl)
+        {
+            <input type="hidden" name="ReturnUrl" value="@currentUrl" />
+        }
+        <button type="submit" class="nav-link">
+            <Icon Name="@IconName" /> @Text
+        </button>
+    </form>
+}
+
+@code {
+    [Parameter] public string Href { get; set; }
+    [Parameter] public string Text { get; set; }
+    [Parameter] public IconName IconName { get; set; }
+    [Parameter] public bool IsForm { get; set; } = false;
+    [Parameter] public string FormAction { get; set; }
+    [Parameter] public string FormMethod { get; set; }
+    [Parameter] public bool ReturnUrl { get; set; } = false;
+
+    private string currentUrl;
+
+    protected override void OnInitialized()
+    {
+        currentUrl = NavManager.Uri;
+    }
+}

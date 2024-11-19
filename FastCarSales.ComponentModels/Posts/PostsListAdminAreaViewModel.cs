@@ -1,0 +1,9 @@
+﻿namespace FastCarSales.Web.ViewModels.Posts
+{
+    using System.Collections.Generic;
+
+    public class PostsListAdminAreaViewModel : PagingViewModel
+    {
+        public IEnumerable<PostInAdminAreaViewModel> Posts { get; init; } = new List<PostInAdminAreaViewModel>();
+    }
+}

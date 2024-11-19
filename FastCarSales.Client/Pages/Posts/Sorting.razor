@@ -1,0 +1,23 @@
+﻿@page "/sorting"
+@using FastCarSales.ComponentModels.Posts
+
+@inherits SortingBase
+
+<EditForm Model="@SortModel" class="row">
+    <div class="col-md-3">
+        <label for="SortModel"><strong>Sort by:</strong></label>
+        <select class="form-select" @bind="SortModel.SortValue" id="sortingDropDown" @bind:after="@SortChanged">
+            @foreach (SortedClass opt in SortedListTemplate)
+            {
+                @if (opt.SortValue == 0)
+                {
+                    <option selected value="@opt.SortValue">@opt.SortDescription</option>
+                }
+                else{
+                    <option value="@opt.SortValue">@opt.SortDescription</option>
+                }
+                
+            }
+        </select>
+    </div>
+</EditForm>

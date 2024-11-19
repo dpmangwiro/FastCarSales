@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "FastCarSales.ComponentModels/1.0.0": {
+        "dependencies": {
+          "FastCarSales.CustomAttributes": "1.0.0",
+          "FastCarSales.Data.Constants": "1.0.0"
+        },
+        "runtime": {
+          "FastCarSales.ComponentModels.dll": {}
+        }
+      },
+      "FastCarSales.CustomAttributes/1.0.0": {
+        "runtime": {
+          "FastCarSales.CustomAttributes.dll": {}
+        }
+      },
+      "FastCarSales.Data.Constants/1.0.0": {
+        "runtime": {
+          "FastCarSales.Data.Constants.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FastCarSales.ComponentModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FastCarSales.CustomAttributes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FastCarSales.Data.Constants/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,239 @@
+﻿@page "/"
+
+
+@inherits HomeBase
+
+@using System.Globalization
+@using System.Collections.Generic
+
+<div style="position:relative">
+
+
+
+	<div class="d-flex float-left col-md-3" style="position: absolute; z-index:1000; top:50px; right:40px width:300px">		
+		<input class="form-control" @bind="SearchText" placeholder="Mercedes, Mercedes S-Class, Golf 5 GTI, etc..." style="height:40px" @onkeydown="BeginSearch">		
+		<a href="/searchresults?searchText=@SearchText" style="text-decoration:none"
+		<span class="btn btn-light d-flex justify-content-center align-items-center" style="position:relative; left:-45px; height:38px" >
+			<i class="fas fa-search" />
+		</span>
+		</a>
+	</div>
+	<Carousel ShowIndicators="true" Autoplay="CarouselAutoPlay.None" ShowPreviousNextControls="true">
+		<CarouselItem Active="@DictCarousel[1]">
+			<img class="d-block w-100 carousel-img-hght" src="images/homepage/Fortuner.png" alt="Fortuner">
+			<CarouselCaption>
+				<h2>Free to Register</h2>
+				<p>Register once, enter many vehicles, free</p>
+				<a class="btn btn-primary rounded-pill btn-lg" href="/searchresults"><strong>Search new & used cars</strong></a>
+			</CarouselCaption>
+		</CarouselItem>
+
+		<CarouselItem Active="@DictCarousel[2]">
+			<img class="d-block w-100 carousel-img-hght" src="images/homepage/toyotacorollaquest.png" alt="Toyota Corolla">
+			<CarouselCaption>
+				<h2>One Month</h2>
+				<p>Each entry expires after one month, simply re-enter if not yet sold</p>
+				<a class="btn btn-light rounded-pill btn-lg" href="/searchresults"><strong>Search new & used cars</strong></a>
+			</CarouselCaption>
+		</CarouselItem>
+
+		<CarouselItem Active="@DictCarousel[3]">
+			<img class="d-block w-100 carousel-img-hght" src="images/homepage/hilux5.jpg" alt="Toyota Hilux">
+			<CarouselCaption>
+				<h2 style="color:black">One Month</h2>
+				<p style="color:ActiveCaption">Each entry expires after one month, simply re-enter if not yet sold</p>
+				<a class="btn btn-light rounded-pill btn-lg" href="/searchresults"><strong>Search new & used cars</strong></a>
+			</CarouselCaption>
+		</CarouselItem>
+
+		<CarouselItem Active="@DictCarousel[4]">
+			<img class="d-block w-100 carousel-img-hght" src="images/homepage/urbancruiser.jpeg" alt="Urban Cruiser">
+			<CarouselCaption>
+				<h2>Search</h2>
+				<p>Simply search for a car to buy</p>
+				<a class="btn btn-light rounded-pill btn-lg"> <strong>View all car posts</strong></a>
+			</CarouselCaption>
+		</CarouselItem>
+
+		<CarouselItem Active="@DictCarousel[5]">
+			<img class="d-block w-100 carousel-img-hght" src="images/homepage/toyotahilux2.jpg" alt="Toyota Hilux">
+			<CarouselCaption>
+				<h2>Large Pool</h2>
+				<p>Many cars to choose from</p>
+
+				<div class="buttons-primary">
+					<AuthorizeView>
+						<Authorized>
+							<a class="btn btn-light btn-lg rounded-pill" href="/createpost"><strong>Sell a car</strong></a>
+						</Authorized>
+						<NotAuthorized>
+							<a class="btn btn-light btn-lg rounded-pill" href="Account/Login"><strong>Sell a car</strong></a>
+						</NotAuthorized>
+					</AuthorizeView>
+					<a class="btn btn-light btn-lg rounded-pill"><strong>Contact us..</strong></a>
+				</div>
+			</CarouselCaption>
+		</CarouselItem>
+
+		<CarouselItem Active="@DictCarousel[6]">
+			<img class="d-block w-100 carousel-img-hght" src="images/homepage/sleekmorden2.png" alt="Sleek morden car">
+			<CarouselCaption>
+				<h2>Fast Market</h2>
+				<p>Very fast market</p>
+
+				<div class="buttons-primary">
+					<a class="btn btn-light btn-round btn-lg" href="/Account/Register"><strong>Register..</strong></a>
+					<a class="btn btn-light btn-lg rounded-pill" href="/searchresults"><strong>Search..</strong></a>
+
+					<AuthorizeView>
+						<Authorized>
+							<a class="btn btn-light btn-lg rounded-pill" href="/createpost"><strong>Sell a car</strong></a>
+						</Authorized>
+						<NotAuthorized>
+							<a class="btn btn-light btn-lg rounded-pill" href="Account/Login"><strong>Sell a car</strong></a>
+						</NotAuthorized>
+					</AuthorizeView>
+
+				</div>
+			</CarouselCaption>
+
+
+		</CarouselItem>
+	</Carousel>
+
+	@* <hr class="my-4"> *@
+	@* <div class="row">
+	<div class="col-12 text-center">
+	<button class="btn btn-dark" id="statistics-button">Show site statistics</button>
+	</div>
+	</div> *@
+	<div class="bg-dark text-white rounded d-none my-4" id="statistics">
+		<div class="row">
+			<h2 class="col-md-4 text-center" id="total-users"></h2>
+			<h2 class="col-md-4 text-center" id="total-posts"></h2>
+			<h2 class="col-md-4 text-center" id="total-bodytypes"></h2>
+		</div>
+	</div>
+
+	@if (FeaturedPosts != null && FeaturedPosts.Count() > 0)
+	{
+		<h3>Featured Listings</h3>
+		<hr class="my-4">
+		<div class="row justify-content-between">
+			@foreach (var post in FeaturedPosts)
+			{
+				<Card Class="mb-4 background-texture col-md-6 m-1" Style="width:63rem;">
+					<CardHeader>
+						<CardTitle>
+							<a class="text-decoration-none" href="/singlepostview/@post.PostID" ><h5 class="card-title text-black text-center ">@post.Car.Make @post.Car.CarModel.Name</h5></a>
+							<a class="text-decoration-none" href="/singlepostview/@post.PostID" ><h5 class="card-title text-black text-center card-price">$@post.Car.Price.ToString("N", CultureInfo.InvariantCulture).Replace(".00", string.Empty)</h5></a>
+						</CardTitle>
+					</CardHeader>
+					<CardBody>
+						<Carousel ShowIndicators="true" Autoplay="CarouselAutoPlay.StartAfterUserInteraction" ShowPreviousNextControls="true">
+							@{
+								var count = 0;
+
+								@foreach (var imageUrl in @post.Car.Images)
+								{
+									@if (count == 0)
+									{
+										<CarouselItem Active="true">
+											<img class="d-block w-100 featured-img-hght" src="@imageUrl" alt="New cars in a store">
+										</CarouselItem>
+									}
+									else
+									{
+										<CarouselItem>
+											<img class="d-block w-100 featured-img-hght" src="@imageUrl" alt="New cars in a store">
+										</CarouselItem>
+									}
+
+									count += 1;
+								}
+							}
+						</Carousel>
+					</CardBody>
+					<CardFooter>
+						<div class="d-flex justify-content-between">
+							<h6 class="card-title">@post.Car.Year, @post.Car.FuelType, @post.Car.TransmissionType, @(post.Car.EngineCapacity)</h6>
+							<a class="btn btn-primary btn-lg rounded-pill" href="/singlepostview/@post.PostID" ><strong>More Info</strong></a>
+						</div>
+					</CardFooter>
+				</Card>
+			}
+		</div>
+	}
+
+	<hr class="my-4">
+	<h3>Recent Posts</h3>
+	<div class="row align-content-center">
+		@foreach (var post in LatestPosts.LatestPosts)
+		{
+			<div class="card m-1 background-texture" style="width: 31rem;">
+				<h6 class="card-price mt-3 ml-1">@post.Car.Price.ToString("N", CultureInfo.InvariantCulture).Replace(".00", string.Empty)</h6>
+				<img src="@post.Car.CoverImage" class="card-img-top" alt="@post.Car.Make @post.Car.CarModel.Name @post.Car.Year">
+				<div class="card-body d-flex flex-column">
+					<a class="text-decoration-none" href="/singlepostview/@post.PostID" ><h5 class="card-title text-black text-center">@post.Car.Make @post.Car.CarModel.Name</h5></a>
+					<hr class="mt-1 mb-2" />
+					<h6 class="card-title">@post.Car.Year, @post.Car.FuelType, @post.Car.TransmissionType, @(post.Car.EngineCapacity)Hp</h6>
+					<div class="row mt-auto">
+						<a href="/singlepostview/@post.PostID" class="btn btn-dark text-center rounded-pill">View more</a>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+</div>
+@*
+    <script>
+        $(document).ready(function () {
+            $('#statistics-button').click(function () {
+
+                if ($('#statistics').is(":hidden")) {
+                    $(this.innerHTML = 'Hide site statistics');
+
+                    $.get('/api/statistics', (data) => {
+                        $('#total-users').text(data.totalUsers + " users");
+                        $('#total-posts').text(data.totalPosts + " car posts");
+                        $('#total-categories').text(data.totalCategories + " car categories");
+                    });
+
+                    $('#statistics').removeClass('d-none');
+                } else {
+                    $('#statistics').addClass('d-none');
+                    $(this.innerHTML = 'Show site statistics');
+                }
+            });
+        });
+    </script>
+ *@
+<style>
+	.carousel-img-hght {
+		height: 600px;
+		object-fit: cover;
+	}
+
+	.featured-img-hght {
+		height: 600px;
+		object-fit: cover;
+	}
+
+	.btn-round {
+		border-radius: 40px;
+	}
+
+	.background-gradient {
+		background: linear-gradient(to right, #f7f8fc, #e2e8f0);
+		padding: 1px;
+		border-radius: 4px; /* Optional: adds rounded corners */
+	}
+
+	.background-texture {
+		background: url('images/homepage/background.webp');
+		background-size: cover; /* Ensures the texture covers the entire div */
+		padding: 1px;
+		border-radius: 4px; /* Optional: adds rounded corners */
+	}
+
+</style>

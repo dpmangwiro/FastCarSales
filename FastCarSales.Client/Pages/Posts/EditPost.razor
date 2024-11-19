@@ -1,0 +1,238 @@
+﻿@page "/editpost/{postid:int}"
+
+@inherits EditPostBase
+
+@if (@PostModel is null || @PostModel.Car is null)
+{
+	<div>
+		<p>Loading...</p>
+	</div>
+}
+else
+{
+	<EditForm Model="@PostModel" OnValidSubmit="EditPost" class="col-md-6 offset-md-3">
+		<h2 class="heading-margin text-center"><i>Edit your car post</i></h2>
+
+		<DataAnnotationsValidator></DataAnnotationsValidator>
+		<ValidationSummary />
+
+		<div class="row mb-3">
+			<div class="col-md-6 mb-3">
+				<label for="@PostModel.Car.MakeId" class="form-label">Make</label>
+				<select class="form-select" @bind="PostModel.Car.MakeId" @bind:after="@MakeChanged">
+					<option disabled selected>Choose Make</option>
+					@foreach (var make in PostDictionary.Makes)
+					{
+						<option value="@make.Id">@make.Name</option>
+					}
+				</select>
+				<ValidationMessage For="@(() => PostModel.Car.MakeId)" class="small text-danger" />
+			</div>
+			<div class="col-md-6 mb-3">
+				<label for="@PostModel.Car.CarModelId" class="form-label">Model</label>
+				<select class="form-select" @bind="@PostModel.Car.CarModelId" @bind:after="ModelChanged">
+					<option disabled selected>Choose model</option>
+					@foreach (var carModel in ThisCarModels)
+					{
+						<option value="@carModel.Id">@carModel.Name</option>
+					}
+				</select>
+				<ValidationMessage For="@(() => PostModel.Car.CarModelId)" class="small text-danger" />
+			</div>
+		</div>
+		<div class="mb-3">
+			<label for="@PostModel.Car.Description" class="form-label">Car Description</label>
+			<InputTextArea @bind-Value="@PostModel.Car.Description" class="form-control" rows="6" placeholder="This is the perfect car..."></InputTextArea>
+			<ValidationMessage For="@(() => PostModel.Car.Description)" class="small text-danger" />
+		</div>
+		<div class="row mb-3">
+			<div class="col-md-4 mb-3 mt-3">
+				<label for="@PostModel.Car.BodyTypeId" class="form-label">Body Type</label>
+				<InputSelect class="form-select" @bind-Value="@PostModel.Car.BodyTypeId">
+					<option disabled selected>Choose body type</option>
+					@foreach (var bodyType in PostDictionary.BodyTypes)
+					{
+						<option value="@bodyType.Id">@bodyType.Name</option>
+					}
+				</InputSelect>
+				<ValidationMessage For="@(() => PostModel.Car.BodyTypeId)" class="small text-danger" />
+			</div>
+			<div class="col-md-4 mb-3 mt-3">
+				<label for="@PostModel.Car.FuelTypeId" class="form-label">Fuel Type</label>
+				<InputSelect class="form-select" @bind-Value="@PostModel.Car.FuelTypeId">
+					<option disabled selected>Choose fuel type</option>
+					@foreach (var fuelType in PostDictionary.FuelTypes)
+					{
+						<option value="@fuelType.Id">@fuelType.Name</option>
+					}
+				</InputSelect>
+				<ValidationMessage For="@(() => PostModel.Car.FuelTypeId)" class="small text-danger" />
+			</div>
+			<div class="col-md-4 mb-3 mt-3">
+				<label for="@PostModel.Car.TransmissionTypeId" class="form-label">Transmission</label>
+				<InputSelect class="form-select" @bind-Value="@PostModel.Car.TransmissionTypeId">
+					<option disabled selected>Choose transmission type</option>
+					@foreach (var transmissionType in PostDictionary.TransmissionTypes)
+					{
+						<option value="@transmissionType.Id">@transmissionType.Name</option>
+					}
+				</InputSelect>
+				<ValidationMessage For="@(() => PostModel.Car.TransmissionTypeId)" class="small text-danger" />
+			</div>
+		</div>
+		<div class="row mb-3">
+			<div class="col-md-4 mb-3 mt-3">
+				<label for="@PostModel.Car.Year" class="form-label">Year</label>
+				<NumberInput TValue="int?" @bind-Value="@PostModel.Car.Year" Placeholder="Enter year" class="form-control" />
+				<ValidationMessage For="@(() => PostModel.Car.Year)" class="small text-danger" />
+			</div>
+			<div class="col-md-4 mb-3 mt-3">
+				<label for="@PostModel.Car.Kilometers" class="form-label">Mileage (km)</label>
+				<NumberInput TValue="int?" @bind-Value="@PostModel.Car.Kilometers" Placeholder="Enter mileage" class="form-control" />
+				<ValidationMessage For="@(() => PostModel.Car.Kilometers)" class="small text-danger" />
+			</div>
+			<div class="col-md-4 mb-3 mt-3">
+				<label for="@PostModel.Car.EngineCapacity" class="form-label">Engine Capacity</label>
+				<NumberInput TValue="decimal?" @bind-Value="@PostModel.Car.EngineCapacity" Placeholder="Enter Engine capacity" class="form-control" />
+				<ValidationMessage For="@(() => PostModel.Car.EngineCapacity)" class="small text-danger" />
+			</div>
+		</div>
+		<div class="row mb-3">
+			<div class="col-md-4 mb-3">
+				<label for="@PostModel.Car.Price" class="form-label">Price</label>
+				<InputNumber @bind-Value="@PostModel.Car.Price" inputmode="numeric" class="form-control" />
+				<ValidationMessage For="@(() => PostModel.Car.Price)" class="small text-danger" />
+			</div>
+
+			<div class="col-md-4 mb-3">
+				<label for="@PostModel.Car.LocationCity" class="form-label">City</label>
+				<InputText @bind-Value="@PostModel.Car.LocationCity" class="form-control" />
+				<ValidationMessage For="@(() => PostModel.Car.LocationCity)" class="small text-danger" />
+			</div>
+			<div class="col-md-4 mb-3">
+				<label for="@PostModel.Car.LocationTown" class="form-label">Town</label>
+				<InputText @bind-Value="@PostModel.Car.LocationTown" class="form-control" />
+				<ValidationMessage For="@(() => PostModel.Car.LocationTown)" class="small text-danger" />
+			</div>
+		</div>
+		<hr />
+		<h5 class="mb-3 text-center">Car images:</h5>
+		<div class="row mb-3">			
+			@if (PostModel.CurrentImages.Any())
+			{
+				<div class="row col-md-12">
+					<div style="display: flex; flex-wrap: wrap;">
+						@foreach (var image in PostModel.CurrentImages)
+						{
+							<div class="col-md-1" style="width:105px">
+								<img src="@image.Path" alt="@image.Id" style="width: 100px; margin-bottom:5px;" />
+
+								<a @onclick="()=> RemoveCurrentImage(image)" class="delete-icon">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+								<span class="cover-check">
+									Is Cover
+									<input checked="@image.IsCoverImage" type="checkbox" id="@image.Id" onclick="@(() => SetCoverImage(image.Id))" />									
+								</span>
+							</div>
+						}
+					</div>
+				</div>
+			}
+		</div>
+		<div class="row col-md-12 mb-3">
+			<label asp-for="@PostModel.Car.Images" class="form-label">Upload more images:</label>
+			<InputFile OnChange="HandleSelectedFiles" multiple accept="image/*" />
+			@if (UploadedImages.Any())
+			{
+				<div class="row col-md-12">
+					<div style="display: flex; flex-wrap: wrap;">
+						@foreach (var image in UploadedImages)
+						{
+							<div class="col-md-1" style="width:105px">
+								<img src="@image.Base64Content" alt="@image.FileName" style="width: 100px; margin-bottom:5px;" />
+
+								<a @onclick="()=> RemoveImage(image.Id)" class="delete-icon">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+								<span class="cover-check">
+									Is Cover
+									<input checked="@image.IsCoverImage" type="checkbox" id="@image.Id" onclick="@(() => SetCoverImage(image.Id))" />
+								</span>
+							</div>
+						}
+					</div>
+				</div>
+			}
+
+		</div>		
+		@* <hr /> *@
+		@* <h5 class="mb-1 text-center">Car extras:</h5>
+		<div class="row">
+			<div class="col">
+				@foreach (var carExtra in PostDictionary.CarExtras)
+				{
+					@if (!extraTypes.ContainsKey(carExtra.Id))
+					{
+						extraTypes[carExtra.Id] = carExtra.Name;
+						<div class="mb-2 mt-3"><h6>@carExtra.Name</h6></div>
+					}
+
+					<div class="form-check-inline mb-2">
+						<input id="extra_@carExtra.Id"
+							   class="form-check-input"
+							   type="checkbox"
+							   name="SelectedExtrasIds"
+							   value="@carExtra.Id"
+							   @(Model.SelectedExtrasIds.Contains(carExtra.Id) ? "checked" : "" )>
+						<label class="form-check-label" for="extra_@carExtra.Id">@carExtra.Name</label>
+					</div>
+				}
+			</div>
+		</div> *@
+		<hr />
+		<h5 class="mb-3 text-center">Contact information:</h5>
+		<div class="row mb-3">
+			<div class="col-md-3 mb-3">
+				<label for="@PostModel.SellerName" class="form-label">Seller Name</label>
+				<InputText @bind-Value="@PostModel.SellerName" class="form-control" />
+				<ValidationMessage For="@(() => PostModel.SellerName)" class="small text-danger" />
+			</div>
+			<div class="col-md-3 mb-3">
+				<label for="@PostModel.SellerPhoneNumber" class="form-label">Seller Phone No.</label>
+				<InputText @bind-Value="@PostModel.SellerPhoneNumber" class="form-control" />
+				<ValidationMessage For="@(() => PostModel.SellerPhoneNumber)" class="small text-danger" />
+			</div>
+			<div class="col-md-6 mb-3">
+				<label for="@PostModel.SellerEmail" class="form-label">Email</label>
+				<InputText @bind-Value="@PostModel.SellerEmail" class="form-control" />
+				<ValidationMessage For="@(() => PostModel.SellerEmail)" class="small text-danger" />
+			</div>
+		</div>
+		<hr />
+		<input type="hidden" asp-for="@PostModel.CreatorId" />
+		<input type="hidden" asp-for="@PostModel.CarId" />
+		<div align="center"><input type="submit" class="btn btn-dark col-4" value="Save changes" /></div>
+	</EditForm>
+}
+
+<style>
+	
+	.delete-icon {		
+		color: blue;
+		border-radius: 50%;
+		padding: 0px;
+		text-decoration: none;
+	}
+
+	.delete-icon:hover {
+		color: red;
+		background-color: lightgrey;
+	}
+
+		.cover-check:hover {		
+			color:white;
+			background-color: blue;
+		}
+
+</style>

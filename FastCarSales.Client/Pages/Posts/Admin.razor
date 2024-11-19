@@ -1,0 +1,98 @@
+﻿@page "/postsadmin"
+@using FastCarSales.ComponentModels.Posts
+
+@inherits AdminBase
+
+<h2 class="heading-margin text-center">Posts Admin @(Posts.PagesCount > 1 ? $", page {Posts.PageNumber}" : string.Empty)</h2>
+
+<div class="col-md-10 offset-md-1 ">
+	<div class="d-flex justify-content-start align-items-center mb-3">
+		<div class="col-md-3">
+			<label for="SortModel"><strong>Sort by:</strong></label>
+			<select class="form-select" @bind="SortModel.SortValue" @bind:after="LoadPosts">
+				@foreach (SortedClass opt in SortedListTemplate)
+				{
+					@if (opt.SortValue == 0)
+					{
+						<option selected value="@opt.SortValue">@opt.SortDescription</option>
+					}
+					else
+					{
+						<option value="@opt.SortValue">@opt.SortDescription</option>
+					}
+
+				}
+			</select>
+		</div>
+
+		<div class="col-md-3 ms-1">
+			<label for="ilterModel"><strong>Filter by:</strong></label>
+			<select class="form-select" @bind="FilterModel.SortValue" @bind:after="LoadPosts">
+				@foreach (SortedClass opt in FilterListTemplate)
+				{
+					@if (opt.SortValue == 0)
+					{
+						<option selected value="@opt.SortValue">@opt.SortDescription</option>
+					}
+					else
+					{
+						<option value="@opt.SortValue">@opt.SortDescription</option>
+					}
+
+				}
+			</select>
+		</div>
+		<div class="col-md-1 mt-4 ms-2">
+			<Button Class="btn btn-secondary" @onclick="LoadPosts">Refresh
+				<i class="fa fas-fa-refresh"></i>
+			</Button>
+		</div>
+	</div>
+
+	@if (Posts.Posts.Count() > 0)
+	{
+		<table class="table table-responsive">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Make</th>
+					<th>Model</th>
+					<th>Year</th>
+					<th>Price</th>
+					<th>Approved</th>
+					<th>Featured</th>
+					<th>Deleted</th>
+					<th>Published On</th>
+					<th>Deleted On</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var post in Posts.Posts)
+				{
+					<tr>
+						<td>@post.Car.Id</td>
+						<td>@post.Car.Make</td>
+						<td>@post.Car.CarModel.Name</td>
+						<td>@post.Car.Year</td>
+						<td>@post.Car.Price</td>
+						<td><input type="checkbox" checked="@post.IsPublic" onclick="@(() => ChangeVisibility(post.PostID))" disabled="@CannotApprove"/></td>
+						<td><input type="checkbox" checked="@post.IsFeatured" onclick="@(() => SetFeatured(post.PostID))" disabled="@CannotChangeFeatured"/></td>
+						<td><input type="checkbox" checked="@post.IsDeleted" disabled /></td>
+						<td>@post.PublishedOn</td>
+						<td>@post.DeletedOn</td>
+						<td>
+							<a @onclick="()=> RestoreDeletePost(post.PostID)" hidden="@NotViewingDeletedItems" class="btn btn-primary float-end mx-1">Restore
+							<i class="fa fa-recycle"></i>	
+							</a>
+							<a href="deletepost/@post.PostID" class="btn btn-danger float-end mx-1">Delete</a>
+							<a href="editpost/@post.PostID" class="btn btn-dark float-end mx-1">Edit</a>
+							<a href="singlepostview/@post.PostID" class="btn btn-secondary float-end mx-1">View</a>							
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	}
+</div>
+<hr />

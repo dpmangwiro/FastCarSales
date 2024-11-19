@@ -1,0 +1,33 @@
+﻿
+@rendermode @(new InteractiveAutoRenderMode(prerender: false))
+@inject IJSRuntime JSRuntime
+
+<h3>karusel</h3>
+
+<Carousel ShowIndicators="true">
+    <CarouselItem>
+        <img class="d-block w-100 pichght" src="images/homepage/Fortuner.png" alt="New cars in a store">
+    </CarouselItem>
+    <CarouselItem>
+        <img class="d-block w-100 pichght" src="images/homepage/Hondacivic573x430.jpeg" alt="New cars in a store">
+    </CarouselItem>
+    <CarouselItem>
+        <img class="d-block w-100 pichght" src="images/homepage/Toyotatundra.jpeg" alt="Parked car in front of a store">
+    </CarouselItem>
+    <CarouselItem>
+        <img class="d-block w-100 pichght" src="images/homepage/toyotahilux3840x2160.jpeg" alt="Parked car in front of a store">
+    </CarouselItem>
+    <CarouselItem Active="true">
+        <img class="d-block w-100 pichght" src="images/homepage/sleekmorden2.png" alt="Many parked cars">
+    </CarouselItem>
+</Carousel>
+
+<style>
+    .pichght {
+        height: 600px;
+        object-fit: cover;
+    }
+</style>
+
+
+

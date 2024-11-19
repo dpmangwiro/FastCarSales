@@ -1,0 +1,143 @@
+﻿@page "/topnavmenu"
+@using FastCarSales.Data.Models
+@using Microsoft.AspNetCore.Identity
+@using FastCarSales.Data
+
+@implements IDisposable
+
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthStateProvider
+@inject HttpClient Http
+
+<div class="d-flex justify-content-end align-items-center">
+
+	<div class="nav-item7 px-3">
+		<NavLink class="nav-link" href="searchresults">
+			<span class="bi bi-lock-nav-menu" aria-hidden="true"></span> Buy A Car
+		</NavLink>
+	</div>
+
+	<AuthorizeView>
+		<Authorized>
+			<div class="nav-item7 px-3">
+				<NavLink class="nav-link" href="createpost">
+					<span class="bi bi-lock-nav-menu" aria-hidden="true"></span> Sell A Car
+				</NavLink>
+			</div>
+
+			@if (IsThisAdminUser(context.User.Identity?.Name))
+			{
+				<div class="nav-item7 px-3">
+					<NavLink class="nav-link" href="/postsadmin">
+						<span class="bi7 bi-lock-nav-menu7" aria-hidden="true"></span> Administration
+					</NavLink>
+				</div>
+			}
+			else
+			{
+				<div class="nav-item7 px-3">
+					<NavLink class="nav-link" href="/mine">
+						<span class="bi7 bi-lock-nav-menu7" aria-hidden="true"></span> My Posts
+					</NavLink>
+				</div>
+			}
+
+			<div class="nav-item7 px-3">
+				<NavLink class="nav-link" href="Account/Manage">
+					<span class="bi7 bi-person-fill-nav-menu7" aria-hidden="true"></span> @context.User.Identity?.Name
+				</NavLink>
+			</div>
+			<div class="nav-item7 px-3">
+				<form action="Account/Logout" method="post">
+					<AntiforgeryToken />
+					<input type="hidden" name="ReturnUrl" value="@currentUrl" />
+					<button type="submit" class="nav-link">
+						<span class="bi bi-arrow-bar-left-nav-menu" aria-hidden="true"></span> Logout
+					</button>
+				</form>
+			</div>
+		</Authorized>
+
+		<NotAuthorized>
+			<div class="nav-item7 px-3">
+				<NavLink class="nav-link" href="Account/Login">
+					<span class="bi7 bi-lock-nav-menu7" aria-hidden="true"></span> Sell A Car
+				</NavLink>
+			</div>
+
+			<div class="nav-item7 px-3">
+				<NavLink class="nav-link" href="Account/Register">
+					<span class="bi7 bi-person-nav-menu7" aria-hidden="true"></span> Register
+				</NavLink>
+			</div>
+			<div class="nav-item7 px-3">
+				<NavLink class="nav-link" href="Account/Login">
+					<span class="bi7 bi-person-badge-nav-menu7" aria-hidden="true"></span> Login
+				</NavLink>
+			</div>
+		</NotAuthorized>
+	</AuthorizeView>
+
+
+	<a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+</div>
+
+@code {
+	private string? currentUrl;
+	private AuthenticationState AuthState;
+	private IEnumerable<string> Admins = new List<string>();
+	private bool UserIsAdmin = false;
+
+	protected override async Task OnInitializedAsync()
+	{
+		//AuthStateProvider.AuthenticationStateChanged += OnAuthenticationStateChanged;
+
+		currentUrl = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
+		NavigationManager.LocationChanged += OnLocationChanged;
+
+		await GetAdminList();
+	}
+
+	protected bool IsThisAdminUser(string userName)
+	{
+		var isadmin = Admins.ToList().Exists(x => x == userName);
+		
+		return isadmin;
+	}
+
+	protected void GetUserAdminStatus()
+	{			
+		AuthState = AuthStateProvider
+					.GetAuthenticationStateAsync()
+					.GetAwaiter()
+					.GetResult();
+
+		//var hasAdminClaim = AuthState.User.HasClaim(x => x.Type == "Permission" && x.Value == "Admin");
+
+		var userName = AuthState?.User?.Identity?.Name;
+		
+		UserIsAdmin = Admins.ToList().Exists(x => x == userName);
+
+	}
+
+	private async Task GetAdminList()
+	{
+		var url = Http.BaseAddress + $"api/Admin/users";
+
+		var admins = await Http.GetFromJsonAsync<IEnumerable<string>>(url);
+
+		Admins = admins ?? new List<string>();
+	}
+		
+	private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+	{
+		currentUrl = NavigationManager.ToBaseRelativePath(e.Location);
+		StateHasChanged();
+	}
+
+	public void Dispose()
+	{
+		NavigationManager.LocationChanged -= OnLocationChanged;
+		//AuthStateProvider.AuthenticationStateChanged -= OnAuthenticationStateChanged;
+	}
+}

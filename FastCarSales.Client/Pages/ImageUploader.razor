@@ -1,0 +1,53 @@
+﻿@page "/upload"
+
+@using FastCarSales.ComponentModels.Images
+
+<h3>Upload Pictures</h3>
+
+<InputFile style="border-radius: 20px; margin: 5px;" OnChange="HandleSelectedFiles" multiple accept="image/*" />
+
+@if (uploadedImages.Any())
+{
+	<div class="col-md-6">
+		<h4>Uploaded Images:</h4>
+		<div style="display: flex; flex-wrap: wrap;">
+			@foreach (var image in uploadedImages)
+			{
+				<div class="col-md-1" style="margin-right: 5px; margin-bottom: 5px">
+					<img src="@image.Base64Content" alt="@image.FileName" style="max-width: 100px;" />
+					@* <button @onclick="() => RemoveImage(image.Id)">Delete</button> *@
+				</div>
+			}
+		</div>
+	</div>
+}
+
+
+@code {
+	private int nextImageId = 1;
+	private List<UploadedImage> uploadedImages = new List<UploadedImage>();
+
+	private async Task HandleSelectedFiles(InputFileChangeEventArgs e)
+	{
+		foreach (var file in e.GetMultipleFiles())
+		{
+			var buffer = new byte[file.Size];
+			await file.OpenReadStream().ReadAsync(buffer);
+
+			uploadedImages.Add(new UploadedImage
+			{					
+				FileName = file.Name,
+				Image = buffer
+			});
+		}
+	}
+
+	private void RemoveImage(string id)
+	{
+		var image = uploadedImages.FirstOrDefault(img => img.Id == id);
+		if (image != null)
+		{
+			uploadedImages.Remove(image);
+		}
+	}
+}

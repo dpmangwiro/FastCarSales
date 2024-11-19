@@ -1,0 +1,773 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\dp\\FastCarSales\\FastCarSales.Tests\\FastCarSales.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\dp\\FastCarSales\\FastCarSales.ComponentModels\\FastCarSales.ComponentModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dp\\FastCarSales\\FastCarSales.ComponentModels\\FastCarSales.ComponentModels.csproj",
+        "projectName": "FastCarSales.ComponentModels",
+        "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.ComponentModels\\FastCarSales.ComponentModels.csproj",
+        "packagesPath": "C:\\Users\\dp\\.nuget\\packages\\",
+        "outputPath": "C:\\dp\\FastCarSales\\FastCarSales.ComponentModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\dp\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\dp\\FastCarSales\\FastCarSales.CustomAttributes\\FastCarSales.CustomAttributes.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.CustomAttributes\\FastCarSales.CustomAttributes.csproj"
+              },
+              "C:\\dp\\FastCarSales\\FastCarSales.Data.Constants\\FastCarSales.Data.Constants.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Constants\\FastCarSales.Data.Constants.csproj"
+              },
+              "C:\\dp\\FastCarSales\\FastCarSales.Data.Dtos\\FastCarSales.Data.Dtos.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Dtos\\FastCarSales.Data.Dtos.csproj"
+              },
+              "C:\\dp\\FastCarSales\\FastCarSales.Data.Models\\FastCarSales.Data.Models.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Models\\FastCarSales.Data.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dp\\FastCarSales\\FastCarSales.CustomAttributes\\FastCarSales.CustomAttributes.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dp\\FastCarSales\\FastCarSales.CustomAttributes\\FastCarSales.CustomAttributes.csproj",
+        "projectName": "FastCarSales.CustomAttributes",
+        "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.CustomAttributes\\FastCarSales.CustomAttributes.csproj",
+        "packagesPath": "C:\\Users\\dp\\.nuget\\packages\\",
+        "outputPath": "C:\\dp\\FastCarSales\\FastCarSales.CustomAttributes\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\dp\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dp\\FastCarSales\\FastCarSales.Data.Constants\\FastCarSales.Data.Constants.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dp\\FastCarSales\\FastCarSales.Data.Constants\\FastCarSales.Data.Constants.csproj",
+        "projectName": "FastCarSales.Data.Constants",
+        "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Constants\\FastCarSales.Data.Constants.csproj",
+        "packagesPath": "C:\\Users\\dp\\.nuget\\packages\\",
+        "outputPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Constants\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\dp\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dp\\FastCarSales\\FastCarSales.Data.Dtos\\FastCarSales.Data.Dtos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dp\\FastCarSales\\FastCarSales.Data.Dtos\\FastCarSales.Data.Dtos.csproj",
+        "projectName": "FastCarSales.Data.Dtos",
+        "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Dtos\\FastCarSales.Data.Dtos.csproj",
+        "packagesPath": "C:\\Users\\dp\\.nuget\\packages\\",
+        "outputPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Dtos\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\dp\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dp\\FastCarSales\\FastCarSales.Data.Models\\FastCarSales.Data.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dp\\FastCarSales\\FastCarSales.Data.Models\\FastCarSales.Data.Models.csproj",
+        "projectName": "FastCarSales.Data.Models",
+        "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Models\\FastCarSales.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\dp\\.nuget\\packages\\",
+        "outputPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\dp\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dp\\FastCarSales\\FastCarSales.Data\\FastCarSales.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dp\\FastCarSales\\FastCarSales.Data\\FastCarSales.Data.csproj",
+        "projectName": "FastCarSales.Data",
+        "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Data\\FastCarSales.Data.csproj",
+        "packagesPath": "C:\\Users\\dp\\.nuget\\packages\\",
+        "outputPath": "C:\\dp\\FastCarSales\\FastCarSales.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\dp\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\dp\\FastCarSales\\FastCarSales.Data.Models\\FastCarSales.Data.Models.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Models\\FastCarSales.Data.Models.csproj"
+              },
+              "C:\\dp\\FastCarSales\\FastCarSales.GlobalConstants\\FastCarSales.GlobalConstants.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.GlobalConstants\\FastCarSales.GlobalConstants.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dp\\FastCarSales\\FastCarSales.GlobalConstants\\FastCarSales.GlobalConstants.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dp\\FastCarSales\\FastCarSales.GlobalConstants\\FastCarSales.GlobalConstants.csproj",
+        "projectName": "FastCarSales.GlobalConstants",
+        "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.GlobalConstants\\FastCarSales.GlobalConstants.csproj",
+        "packagesPath": "C:\\Users\\dp\\.nuget\\packages\\",
+        "outputPath": "C:\\dp\\FastCarSales\\FastCarSales.GlobalConstants\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\dp\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dp\\FastCarSales\\FastCarSales.MapperConfigurations\\FastCarSales.MapperConfigurations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dp\\FastCarSales\\FastCarSales.MapperConfigurations\\FastCarSales.MapperConfigurations.csproj",
+        "projectName": "FastCarSales.MapperConfigurations",
+        "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.MapperConfigurations\\FastCarSales.MapperConfigurations.csproj",
+        "packagesPath": "C:\\Users\\dp\\.nuget\\packages\\",
+        "outputPath": "C:\\dp\\FastCarSales\\FastCarSales.MapperConfigurations\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\dp\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\dp\\FastCarSales\\FastCarSales.ComponentModels\\FastCarSales.ComponentModels.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.ComponentModels\\FastCarSales.ComponentModels.csproj"
+              },
+              "C:\\dp\\FastCarSales\\FastCarSales.Data.Models\\FastCarSales.Data.Models.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Models\\FastCarSales.Data.Models.csproj"
+              },
+              "C:\\dp\\FastCarSales\\FastCarSales.Services\\FastCarSales.Services.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Services\\FastCarSales.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dp\\FastCarSales\\FastCarSales.Services\\FastCarSales.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dp\\FastCarSales\\FastCarSales.Services\\FastCarSales.Services.csproj",
+        "projectName": "FastCarSales.Services",
+        "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Services\\FastCarSales.Services.csproj",
+        "packagesPath": "C:\\Users\\dp\\.nuget\\packages\\",
+        "outputPath": "C:\\dp\\FastCarSales\\FastCarSales.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\dp\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\dp\\FastCarSales\\FastCarSales.Data.Dtos\\FastCarSales.Data.Dtos.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Dtos\\FastCarSales.Data.Dtos.csproj"
+              },
+              "C:\\dp\\FastCarSales\\FastCarSales.Data.Models\\FastCarSales.Data.Models.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Data.Models\\FastCarSales.Data.Models.csproj"
+              },
+              "C:\\dp\\FastCarSales\\FastCarSales.Data\\FastCarSales.Data.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Data\\FastCarSales.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dp\\FastCarSales\\FastCarSales.Tests\\FastCarSales.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dp\\FastCarSales\\FastCarSales.Tests\\FastCarSales.Tests.csproj",
+        "projectName": "FastCarSales.Tests",
+        "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Tests\\FastCarSales.Tests.csproj",
+        "packagesPath": "C:\\Users\\dp\\.nuget\\packages\\",
+        "outputPath": "C:\\dp\\FastCarSales\\FastCarSales.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\dp\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\dp\\FastCarSales\\FastCarSales.MapperConfigurations\\FastCarSales.MapperConfigurations.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.MapperConfigurations\\FastCarSales.MapperConfigurations.csproj"
+              },
+              "C:\\dp\\FastCarSales\\FastCarSales.Services\\FastCarSales.Services.csproj": {
+                "projectPath": "C:\\dp\\FastCarSales\\FastCarSales.Services\\FastCarSales.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "Moq.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1.2, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

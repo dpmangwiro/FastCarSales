@@ -1,0 +1,24 @@
+﻿@page "/testservice"
+
+<h3>@TestMsg</h3>
+
+
+
+@code {
+    [Inject] TestService testService { get; set; } = null!;
+
+    string TestMsg = "";
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (!firstRender)
+        {
+            return;
+        }
+
+        TestMsg = testService.Helloserver();
+
+        StateHasChanged();
+    }
+
+}
