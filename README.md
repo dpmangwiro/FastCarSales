@@ -62,7 +62,7 @@ Run the application:
   
   **View Listings**: Browse available cars on the "Home" page.
 
-Admin Panel: Admins can manage all listings and users through the admin panel accessible via the "Administration" link.
+  **Admin Panel**: Admins can manage all listings and users through the admin panel accessible via the "Administration" link.
 
 ## Original Project ##
 This project was originally based on the MyCarDealershipProject by Nikolay Mihov, which was implemented using MVC. Significant modifications and enhancements have been made to adapt the project to Blazor and introduce new features.
