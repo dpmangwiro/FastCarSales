@@ -18,7 +18,7 @@ FastCarSales is a modern web application for managing car sales. Built with Blaz
   **Admin Panel**: Special admin interface for managing users and listings.
 
 ## Technologies Used ##
-  **Blazo**r: Frontend framework for building interactive web UIs.
+  **Blazor**: Frontend framework for building interactive web UIs.
   
   **.NET Core**: Backend framework for the server-side logic.
   
@@ -31,8 +31,8 @@ FastCarSales is a modern web application for managing car sales. Built with Blaz
 
 ## Getting Started ##
   ### Prerequisites ###
-    *.NET Core SDK    
-    *SQL Server
+    * .NET Core SDK    
+    * SQL Server
 
 ## Installation ##
 Clone the repository:
@@ -64,7 +64,7 @@ Run the application:
 
 Admin Panel: Admins can manage all listings and users through the admin panel accessible via the "Administration" link.
 
-##Original Project##
+## Original Project ##
 This project was originally based on the MyCarDealershipProject by Nikolay Mihov, which was implemented using MVC. Significant modifications and enhancements have been made to adapt the project to Blazor and introduce new features.
 
 ## Contributing ##
