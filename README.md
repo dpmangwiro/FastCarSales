@@ -31,8 +31,8 @@ FastCarSales is a modern web application for managing car sales. Built with Blaz
 
 ## Getting Started ##
   ### Prerequisites ###
-    * .NET Core SDK    
-    * SQL Server
+    - .NET Core SDK    
+    - SQL Server
 
 ## Installation ##
 Clone the repository:
@@ -51,7 +51,7 @@ Modify the appsettings.json file to include your SQL Server connection details.
 
 Apply database migrations:
 
-`dotnet ef database update'
+`dotnet ef database update`
 
 Run the application:
 
