@@ -1,8 +1,9 @@
 #FastCarSales
-Overview
+
+##Overview
 FastCarSales is a modern web application for managing car sales. Built with Blazor, it offers a seamless and interactive user experience for car dealers and buyers. The application features a robust set of tools for creating, viewing, and managing car listings.
 
-Features
+##Features
 User Authentication: Secure login and registration for users.
 
 Role-Based Access Control: Admin and User roles to manage permissions.
@@ -15,7 +16,7 @@ Responsive Design: Fully responsive design for mobile and desktop.
 
 Admin Panel: Special admin interface for managing users and listings.
 
-Technologies Used
+##Technologies Used
 Blazor: Frontend framework for building interactive web UIs.
 
 .NET Core: Backend framework for the server-side logic.
@@ -26,15 +27,14 @@ SQL Server: Database for storing application data.
 
 Bootstrap: CSS framework for responsive design.
 
-Jasper Reports: Tool for generating and managing reports.
 
-Getting Started
+##Getting Started
 Prerequisites
 .NET Core SDK
 
 SQL Server
 
-Installation
+##Installation
 Clone the repository:
 
 bash
