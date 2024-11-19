@@ -1,10 +1,10 @@
-#FastCarSales$
+# FastCarSales #
 
-##Overview##
+## Overview ##
 
 FastCarSales is a modern web application for managing car sales. Built with Blazor, it offers a seamless and interactive user experience for car dealers and buyers. The application features a robust set of tools for creating, viewing, and managing car listings.
 
-##Features##
+## Features ##
   **User Authentication**: Secure login and registration for users.
   
   **Role-Based Access Control**: Admin and User roles to manage permissions.
@@ -17,7 +17,7 @@ FastCarSales is a modern web application for managing car sales. Built with Blaz
   
   **Admin Panel**: Special admin interface for managing users and listings.
 
-##Technologies Used##
+## Technologies Used ##
   **Blazo**r: Frontend framework for building interactive web UIs.
   
   **.NET Core**: Backend framework for the server-side logic.
@@ -29,13 +29,12 @@ FastCarSales is a modern web application for managing car sales. Built with Blaz
   **Bootstrap**: CSS framework for responsive design.
 
 
-##Getting Started##
-  ###Prerequisites###
-    *.NET Core SDK
-    
+## Getting Started ##
+  ### Prerequisites ###
+    *.NET Core SDK    
     *SQL Server
 
-##Installation
+## Installation ##
 Clone the repository:
 
 
@@ -58,7 +57,7 @@ Run the application:
 
 `dotnet run`
 
-##Usage##
+## Usage ##
   **Create Listings**: Users can create new car listings by navigating to the "Sell A Car" page.
   
   **View Listings**: Browse available cars on the "Home" page.
@@ -68,7 +67,7 @@ Admin Panel: Admins can manage all listings and users through the admin panel ac
 ##Original Project##
 This project was originally based on the MyCarDealershipProject by Nikolay Mihov, which was implemented using MVC. Significant modifications and enhancements have been made to adapt the project to Blazor and introduce new features.
 
-##Contributing##
+## Contributing ##
 We welcome contributions! Please follow these steps to contribute:
 
 Fork the repository.
@@ -81,10 +80,10 @@ Push to the branch (git push origin feature-branch).
 
 Create a new Pull Request.
 
-##License##
+## License ##
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-##Contact##
+## Contact ##
 For any questions or feedback, please contact us at dpmangwiro@gmail.com.
 
 
