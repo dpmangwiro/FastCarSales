@@ -6,7 +6,7 @@ FastCarSales is a modern web application for managing car sales. Built with Blaz
 
 ## Features
 
- - #### Posts ####
+ - ### Posts ###
    
    **Featured Posts**: Features 2 Posts in the featured section.
    
@@ -16,23 +16,23 @@ FastCarSales is a modern web application for managing car sales. Built with Blaz
    
    **Admin Panel**: Special admin interface for managing listings. Admin can view, approve, delete, restore, set featured posts
  
- - #### User Accounts ####
+ - ### User Accounts ###
  
    **Registration**: Users who need to sell on the website can register to sell. Users can post an unlimited number of cars.
  
    **Posts Management**: Users can view, edit and delete their posts.
      
- - #### User Authentication ####
+ - ### User Authentication ###
  
    Secure login and registration for users.
 
-- #### Responsive Design ####
+- ### Responsive Design ###
 
    Fully responsive design for mobile and desktop.
 
 ## Technologies Used
 
-**Blazor**: Frontend framework for building interactive web UIs.
+**Bootstrap Blazor**: Frontend framework for building interactive web UIs.
 
 **.NET Core**: Backend framework for the server-side logic.
 
