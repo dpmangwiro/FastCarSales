@@ -1,3 +1,4 @@
+using FastCarSales.ClaimsInitializer;
 using FastCarSales.Client;
 using FastCarSales.Client.Events;
 using FastCarSales.Client.LocalService;
@@ -13,6 +14,7 @@ using FastCarSales.Services.Cars;
 using FastCarSales.Services.Images;
 using FastCarSales.Services.Posts;
 using FastCarSales.Services.Statistics;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Server;
 using Microsoft.AspNetCore.Identity;
@@ -45,9 +47,13 @@ builder.Services.AddScoped<IdentityUserAccessor>();
 builder.Services.AddScoped<IdentityRedirectManager>();
 builder.Services.AddScoped<AuthenticationStateProvider, PersistingRevalidatingAuthenticationStateProvider>();
 
+//builder.Services.AddSingleton<AuthenticationStateProvider, PersistentAuthenticationStateProvider>();
+
+//builder.Services.AddScoped<IClaimsTransformation, ApplicationUserClaimsTransformation>();
+
 builder.Services.AddAuthorization(options =>
 {
-	options.AddPolicy("AdminPolicy", policy => policy.RequireClaim("Permission", "Admin"));
+	//options.AddPolicy("AdminPolicy", policy => policy.RequireClaim("Permission", "Admin"));
 
 	//options.AddPolicy("AdminPolicy", policy => 
  //       policy.RequireAssertion(context => context.User.HasClaim(c => c.Type == ClaimTypes.Email && (c.Value == "dpmangwiro@gmail.com" || c.Value == "fastcarsalesadmin@gmail.com"))));

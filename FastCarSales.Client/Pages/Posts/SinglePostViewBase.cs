@@ -4,12 +4,19 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using System.Web;
 using System.Net.Http.Json;
+using BlazorBootstrap;
 
 
 namespace FastCarSales.Client.Pages.Posts
 {
     public class SinglePostViewBase: ComponentBase
     {
+		protected List<BreadcrumbItem> BreadcrumbItems = new List<BreadcrumbItem>()
+		{
+			new BreadcrumbItem{Text = "Home", Href="/"},
+			new BreadcrumbItem{Text = "Post Details", Href="/singlepostview", IsCurrentPage= true}
+		};
+
 		[Inject] NavigationManager navManager {  get; set; } = null!;
 		[Inject] HttpClient Http { get; set; } = null!;
 		[Inject] IMapper Mapper { get; set; } = null!;

@@ -161,6 +161,10 @@
       "PackagePath": "staticwebassets\\scripts\\state.js"
     },
     {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales\\wwwroot\\site.css",
+      "PackagePath": "staticwebassets\\site.css"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FastCarSales.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

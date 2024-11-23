@@ -2,6 +2,10 @@
 
 @inherits EditPostBase
 
+<div>
+	<Breadcrumb Items="BreadcrumbItems"></Breadcrumb>
+</div>
+
 @if (@PostModel is null || @PostModel.Car is null)
 {
 	<div>

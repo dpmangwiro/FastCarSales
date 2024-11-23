@@ -1,7 +1,17 @@
 ﻿@page "/postsadmin"
 @using FastCarSales.ComponentModels.Posts
+@using Microsoft.AspNetCore.Authorization
 
 @inherits AdminBase
+
+@attribute [Authorize(Roles ="Admin")]
+
+<div>
+	<Breadcrumb Items="BreadcrumbItems"></Breadcrumb>
+</div>
+
+<AuthorizeView Roles="Admin">
+
 
 <h2 class="heading-margin text-center">Posts Admin @(Posts.PagesCount > 1 ? $", page {Posts.PageNumber}" : string.Empty)</h2>
 
@@ -47,6 +57,7 @@
 				<i class="fa fas-fa-refresh"></i>
 			</Button>
 		</div>
+		
 	</div>
 
 	@if (Posts.Posts.Count() > 0)
@@ -85,7 +96,7 @@
 							<a @onclick="()=> RestoreDeletePost(post.PostID)" hidden="@NotViewingDeletedItems" class="btn btn-primary float-end mx-1">Restore
 							<i class="fa fa-recycle"></i>	
 							</a>
-							<a href="deletepost/@post.PostID" class="btn btn-danger float-end mx-1">Delete</a>
+							<a onclick="@(() => ManagePostDeletion(post.PostID))" class="btn btn-danger float-end mx-1">Delete</a>
 							<a href="editpost/@post.PostID" class="btn btn-dark float-end mx-1">Edit</a>
 							<a href="singlepostview/@post.PostID" class="btn btn-secondary float-end mx-1">View</a>							
 						</td>
@@ -93,6 +104,15 @@
 				}
 			</tbody>
 		</table>
+
+		<div class="d-flex justify-items-center col-md-5 offset-md-5">
+			<div class="p-1"><Badge Color="BadgeColor.Info">All:8</Badge> </div>
+			<div class="p-1"><Badge Color="BadgeColor.Info">Featured:8</Badge> </div>
+			<div class="p-1"><Badge Color="BadgeColor.Info">New:8</Badge> </div>
+			<div class="p-1"> <Badge Color="BadgeColor.Info">Deleted:8</Badge></div>
+			<div class="p-1"> <Badge Color="BadgeColor.Info">Expired:8</Badge></div>
+		</div>
 	}
 </div>
 <hr />
+</AuthorizeView>

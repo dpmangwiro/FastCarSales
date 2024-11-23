@@ -4,8 +4,11 @@
 @using Microsoft.JSInterop
 @using System.Web
 
-
 @inherits SinglePostViewBase
+
+<div>
+	<Breadcrumb Items="BreadcrumbItems"></Breadcrumb>
+</div>
 
 @if (SinglePost == null || SinglePost.Car == null)
 {

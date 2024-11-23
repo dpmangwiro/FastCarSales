@@ -21,8 +21,16 @@
       "PackagePath": "staticwebassets\\appsettings.json"
     },
     {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\01db9416-3686-4c31-b5a2-2ed89f03deb6.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\01db9416-3686-4c31-b5a2-2ed89f03deb6.jpg"
+    },
+    {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\044c8da6-02ab-4fc6-b7c0-04b1f094b3a8.jpg",
       "PackagePath": "staticwebassets\\images\\cars\\044c8da6-02ab-4fc6-b7c0-04b1f094b3a8.jpg"
+    },
+    {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\055099ed-4add-4d02-bae4-25993a078db8.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\055099ed-4add-4d02-bae4-25993a078db8.jpg"
     },
     {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\059eaaa6-c57f-4c42-bab9-15f13c36ca9a.jpg",
@@ -35,6 +43,18 @@
     {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\08f5ed17-977b-4644-962c-8539ff84c10e.jpg",
       "PackagePath": "staticwebassets\\images\\cars\\08f5ed17-977b-4644-962c-8539ff84c10e.jpg"
+    },
+    {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\095fd136-b8d9-4649-81ce-9b4bf5d0768b.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\095fd136-b8d9-4649-81ce-9b4bf5d0768b.jpg"
+    },
+    {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\0998a98b-b849-4fb2-8417-56315f1f0872.jpeg",
+      "PackagePath": "staticwebassets\\images\\cars\\0998a98b-b849-4fb2-8417-56315f1f0872.jpeg"
+    },
+    {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\0c42eb53-8f28-49af-9fd5-755659d1c391.jpeg",
+      "PackagePath": "staticwebassets\\images\\cars\\0c42eb53-8f28-49af-9fd5-755659d1c391.jpeg"
     },
     {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\10d14130-0d8e-4253-8c0f-824d372acb23.jpg",
@@ -79,6 +99,10 @@
     {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\2a9dd051-9a53-4649-aa63-33889496eb93.jpg",
       "PackagePath": "staticwebassets\\images\\cars\\2a9dd051-9a53-4649-aa63-33889496eb93.jpg"
+    },
+    {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\3057b40a-e944-4a70-9e28-291ea9ab53ee.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\3057b40a-e944-4a70-9e28-291ea9ab53ee.jpg"
     },
     {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\34ba3dc1-ed88-4621-a2f3-3758a089015a.jpg",
@@ -137,6 +161,18 @@
       "PackagePath": "staticwebassets\\images\\cars\\7f68ed64-f142-4534-8d13-d40abd5d301d.jpg"
     },
     {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\81488b9a-6974-4423-a733-ae4aa5db020d.jpeg",
+      "PackagePath": "staticwebassets\\images\\cars\\81488b9a-6974-4423-a733-ae4aa5db020d.jpeg"
+    },
+    {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\823bb926-7ab2-497c-b5ac-44478fb00d8c.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\823bb926-7ab2-497c-b5ac-44478fb00d8c.jpg"
+    },
+    {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\86cb1242-4a29-4c65-96a3-8f8ea23b501c.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\86cb1242-4a29-4c65-96a3-8f8ea23b501c.jpg"
+    },
+    {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\90334b66-4068-45f5-a0a7-5542de7f1bd3.jpg",
       "PackagePath": "staticwebassets\\images\\cars\\90334b66-4068-45f5-a0a7-5542de7f1bd3.jpg"
     },
@@ -153,12 +189,24 @@
       "PackagePath": "staticwebassets\\images\\cars\\990f00a1-2ccb-4974-a3d2-b03564550967.jpg"
     },
     {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\9beba17e-8cde-41f8-846f-0deabf002dc9.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\9beba17e-8cde-41f8-846f-0deabf002dc9.jpg"
+    },
+    {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\a5af95a2-5820-4a6d-8975-c62ccaf066ed.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\a5af95a2-5820-4a6d-8975-c62ccaf066ed.jpg"
+    },
+    {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\a6896cf3-eafe-4c28-9012-cd9463adb4ba.jpg",
       "PackagePath": "staticwebassets\\images\\cars\\a6896cf3-eafe-4c28-9012-cd9463adb4ba.jpg"
     },
     {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\aad2bf71-5fd0-4932-a534-8b9a7eacfc3e.jpg",
       "PackagePath": "staticwebassets\\images\\cars\\aad2bf71-5fd0-4932-a534-8b9a7eacfc3e.jpg"
+    },
+    {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\ae19ee6b-32f7-43ad-af90-47fff401feca.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\ae19ee6b-32f7-43ad-af90-47fff401feca.jpg"
     },
     {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\b0c8fda2-6f19-44d8-aac7-80484abdb91a.jpg",
@@ -197,6 +245,10 @@
       "PackagePath": "staticwebassets\\images\\cars\\d2c21e9d-4c96-45df-a325-79dcc5e2bd89.jpg"
     },
     {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\e0e16039-32fe-4861-a4a4-4b8e65b38dcc.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\e0e16039-32fe-4861-a4a4-4b8e65b38dcc.jpg"
+    },
+    {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\e80c095c-5b40-4a62-a7dc-1a1efd8d67dd.jpg",
       "PackagePath": "staticwebassets\\images\\cars\\e80c095c-5b40-4a62-a7dc-1a1efd8d67dd.jpg"
     },
@@ -207,6 +259,10 @@
     {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\eb517fab-c955-40e4-bc7c-4f23cf03dc52.jpg",
       "PackagePath": "staticwebassets\\images\\cars\\eb517fab-c955-40e4-bc7c-4f23cf03dc52.jpg"
+    },
+    {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\efaf78fb-b09c-4e94-bce7-5e6a26de2669.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\efaf78fb-b09c-4e94-bce7-5e6a26de2669.jpg"
     },
     {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\f3ef1b39-d2d8-4ae6-a15e-8b06cf119dc8.jpg",
@@ -227,6 +283,10 @@
     {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\f5b1232c-2f1a-4eae-ab20-919ea7eddc63.jpg",
       "PackagePath": "staticwebassets\\images\\cars\\f5b1232c-2f1a-4eae-ab20-919ea7eddc63.jpg"
+    },
+    {
+      "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\cars\\f7a41631-7015-4a19-9dac-e71988d71e5b.png",
+      "PackagePath": "staticwebassets\\images\\cars\\f7a41631-7015-4a19-9dac-e71988d71e5b.png"
     },
     {
       "Id": "C:\\dp\\FastCarSales\\FastCarSales.Client\\wwwroot\\images\\homepage\\Fortuner.png",

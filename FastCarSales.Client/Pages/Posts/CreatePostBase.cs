@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using FastCarSales.ComponentModels.Cars.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using FastCarSales.Web.ViewModels.Images;
+using BlazorBootstrap;
 
 
 namespace FastCarSales.Client.Pages.Posts
@@ -19,6 +20,12 @@ namespace FastCarSales.Client.Pages.Posts
     [Authorize]
     public class CreatePostBase : ComponentBase
     {
+		protected List<BreadcrumbItem> BreadcrumbItems = new List<BreadcrumbItem>()
+		{
+			new BreadcrumbItem{Text = "Home", Href="/"},
+			new BreadcrumbItem{Text = "New Post", Href="/createpost", IsCurrentPage= true}
+		};
+
 		#region Variable Declaration
 		[Inject] HttpClient Http { get; set; } = null!;        
         [Inject] IMapper Mapper { get; set; } = null!;

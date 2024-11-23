@@ -1,4 +1,5 @@
 ﻿using Azure;
+using BlazorBootstrap;
 using FastCarSales.Web.ViewModels.Posts;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -11,18 +12,25 @@ namespace FastCarSales.Client.Pages.Posts
 {
     public class DeletePostBase: ComponentBase
     {
-        [Inject] HttpClient Http { get; set; } = null!;
-        [Inject] AuthenticationStateProvider AuthStateProvider { get; set; } = null!;
+		protected List<BreadcrumbItem> BreadcrumbItems = new List<BreadcrumbItem>()
+		{
+			new BreadcrumbItem{Text = "Home", Href="/"},
+			new BreadcrumbItem{Text = "Delete Post", Href="/deletepost", IsCurrentPage= true}
+		};
+
+		[Inject] HttpClient Http { get; set; } = null!;
+        [CascadingParameter] private Task<AuthenticationState> AuthState { get; set; } = null!;
 		[Inject] NavigationManager NavManager { get; set; } = null!;
 		[Inject] IJSRuntime JSRuntime { get; set; } = null!;
 		//[Inject] ILogger<DeletePostBase> Logger { get; set; } = null!;
 
 
 		protected PostByUserViewModel? MyPostView = new PostByUserViewModel();
-        [Parameter] public int PostId { get; set; } 
-
-        protected bool UserIsAdmin = false;
-        protected override async Task OnAfterRenderAsync(bool firstRender)
+        [Parameter] public int PostId { get; set; }
+		
+		protected bool UserIsAdmin = false;
+		
+		protected override async Task OnAfterRenderAsync(bool firstRender)
         {
            if (!firstRender) { return; }
 
@@ -42,11 +50,12 @@ namespace FastCarSales.Client.Pages.Posts
                 {
                     MyPostView = new PostByUserViewModel();
                 }
-                 
-                //Logger.LogInformation($"MyPostView car make: {MyPostView.Car.Make}" );
 
-                var authStat = await AuthStateProvider.GetAuthenticationStateAsync();
-                UserIsAdmin = authStat.User.HasClaim(x => x.Value == "Admin");
+				//Logger.LogInformation($"MyPostView car make: {MyPostView.Car.Make}" );
+				
+				var principal = (await AuthState).User;
+								
+                UserIsAdmin = principal.IsInRole("Admin");
 
                 await InvokeAsync(StateHasChanged);
 
@@ -58,8 +67,34 @@ namespace FastCarSales.Client.Pages.Posts
             }
         }
 
-		protected async Task DeletePost()
+		
+		protected async Task DeletePostManager()
 		{			
+			try
+			{	
+				await DeletePost();					
+				
+				if (UserIsAdmin)
+				{					
+					NavManager.NavigateTo("/postsadmin");
+				}
+				else
+				{
+					NavManager.NavigateTo("/mine");
+				}
+
+			}
+			catch (Exception ex)
+			{
+				await JSRuntime.InvokeVoidAsync("alert", "Error deleting post" + ex.Message);
+				//Logger.LogError("Error gettin deletepost infor" + ex.Message);
+			}
+		}
+
+		
+
+		protected async Task DeletePost()
+		{
 			try
 			{
 				//Logger.LogInformation($"MyPostView onAfterRender enter");
@@ -74,16 +109,7 @@ namespace FastCarSales.Client.Pages.Posts
 
 				if (!response.IsSuccessStatusCode) { throw new Exception(response.ReasonPhrase); }
 
-				//Logger.LogInformation($"MyPostView car make: {MyPostView.Car.Make}" );
-								
-				if (UserIsAdmin)
-				{
-					NavManager.NavigateTo("/allposts");
-				}
-				else
-				{
-					NavManager.NavigateTo("/mine");
-				}				
+				//Logger.LogInformation($"MyPostView car make: {MyPostView.Car.Make}" );				
 
 			}
 			catch (Exception ex)

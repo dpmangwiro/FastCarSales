@@ -16,6 +16,7 @@ C:\dp\FastCarSales\FastCarSales.CustomAttributes\obj\Debug\net8.0\FastCarSales.C
 C:\dp\FastCarSales\FastCarSales.CustomAttributes\obj\Debug\net8.0\FastCarSales.CustomAttributes.AssemblyInfoInputs.cache
 C:\dp\FastCarSales\FastCarSales.CustomAttributes\obj\Debug\net8.0\FastCarSales.CustomAttributes.AssemblyInfo.cs
 C:\dp\FastCarSales\FastCarSales.CustomAttributes\obj\Debug\net8.0\FastCarSales.CustomAttributes.csproj.CoreCompileInputs.cache
+C:\dp\FastCarSales\FastCarSales.CustomAttributes\obj\Debug\net8.0\FastCarSales.CustomAttributes.sourcelink.json
 C:\dp\FastCarSales\FastCarSales.CustomAttributes\obj\Debug\net8.0\FastCarSales.CustomAttributes.dll
 C:\dp\FastCarSales\FastCarSales.CustomAttributes\obj\Debug\net8.0\refint\FastCarSales.CustomAttributes.dll
 C:\dp\FastCarSales\FastCarSales.CustomAttributes\obj\Debug\net8.0\FastCarSales.CustomAttributes.pdb

@@ -1,4 +1,5 @@
-﻿using FastCarSales.Client.Events;
+﻿using BlazorBootstrap;
+using FastCarSales.Client.Events;
 using FastCarSales.Client.LocalService;
 using FastCarSales.ComponentModels.Posts;
 using FastCarSales.Web.ViewModels.Posts;
@@ -13,9 +14,15 @@ namespace FastCarSales.Client.Pages.Posts
 {
 	public class AdminBase : ComponentBase
 	{
+		protected List<BreadcrumbItem> BreadcrumbItems = new List<BreadcrumbItem>()
+		{
+			new BreadcrumbItem{Text = "Home", Href="/"},
+			new BreadcrumbItem{Text = "Admin", Href="/postsadmin", IsCurrentPage= true}
+		};
 		[Inject] IJSRuntime jSRuntime { get; set; } = null!;
 		[Inject] HttpClient Http { get; set; } = null!;
 		[Inject] EventAggregator EventAggregator { get; set; } = null!;
+		[Inject] NavigationManager NavgManager { get; set; } = null!;
 
 		protected PostsListAdminAreaViewModel Posts = new PostsListAdminAreaViewModel();
 		protected SortedClass SortModel { get; set; } = new SortedClass();
@@ -91,7 +98,6 @@ namespace FastCarSales.Client.Pages.Posts
 			}
 			catch (Exception)
 			{
-
 				throw;
 			}
 
@@ -154,7 +160,7 @@ namespace FastCarSales.Client.Pages.Posts
 		{
 			try
 			{
-				var url = Http.BaseAddress + $"api/Admin/{postId}";
+				var url = Http.BaseAddress + $"api/Admin/restore/{postId}";
 
 				var response = await Http.DeleteFromJsonAsync<bool>(url);
 
@@ -164,6 +170,26 @@ namespace FastCarSales.Client.Pages.Posts
 				}
 
 				LoadPosts();
+			}
+			catch (Exception ex)
+			{
+				await jSRuntime.InvokeVoidAsync("alert", "Error fetching search results: " + ex.Message);
+			}
+		}
+
+		protected async Task EmptyDeletedBin(int postId)
+		{
+			try
+			{
+				var url = Http.BaseAddress + $"api/Admin/{postId}";
+
+				var response = await Http.DeleteFromJsonAsync<bool>(url);
+
+				if (!response)
+				{
+					throw new Exception("failed to restore");
+				}
+
 			}
 			catch (Exception ex)
 			{
@@ -192,7 +218,21 @@ namespace FastCarSales.Client.Pages.Posts
 			}
 		}
 
+		protected async Task ManagePostDeletion(int postId)
+		{
+			var postToDelete = Posts.Posts.ToList().First(x => x.PostID == postId);
 
+			if (postToDelete.IsDeleted)
+			{
+				await EmptyDeletedBin(postId);
+			}
+			else
+			{
+				NavgManager.NavigateTo($"/deletepost/{postId}");
+			}
+
+			LoadPosts();
+		}
 
 
 

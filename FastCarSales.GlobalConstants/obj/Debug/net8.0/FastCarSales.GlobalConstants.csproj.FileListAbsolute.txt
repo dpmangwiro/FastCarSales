@@ -16,6 +16,7 @@ C:\dp\FastCarSales\FastCarSales.GlobalConstants\obj\Debug\net8.0\FastCarSales.Gl
 C:\dp\FastCarSales\FastCarSales.GlobalConstants\obj\Debug\net8.0\FastCarSales.GlobalConstants.AssemblyInfoInputs.cache
 C:\dp\FastCarSales\FastCarSales.GlobalConstants\obj\Debug\net8.0\FastCarSales.GlobalConstants.AssemblyInfo.cs
 C:\dp\FastCarSales\FastCarSales.GlobalConstants\obj\Debug\net8.0\FastCarSales.GlobalConstants.csproj.CoreCompileInputs.cache
+C:\dp\FastCarSales\FastCarSales.GlobalConstants\obj\Debug\net8.0\FastCarSales.GlobalConstants.sourcelink.json
 C:\dp\FastCarSales\FastCarSales.GlobalConstants\obj\Debug\net8.0\FastCarSales.GlobalConstants.dll
 C:\dp\FastCarSales\FastCarSales.GlobalConstants\obj\Debug\net8.0\refint\FastCarSales.GlobalConstants.dll
 C:\dp\FastCarSales\FastCarSales.GlobalConstants\obj\Debug\net8.0\FastCarSales.GlobalConstants.pdb

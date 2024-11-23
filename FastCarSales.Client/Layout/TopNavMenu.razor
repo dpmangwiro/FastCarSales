@@ -84,8 +84,7 @@
 
 @code {
 	private string? currentUrl;
-	private AuthenticationState AuthState;
-	private IEnumerable<string> Admins = new List<string>();
+	private AuthenticationState AuthState;	
 	private bool UserIsAdmin = false;
 
 	protected override async Task OnInitializedAsync()
@@ -95,39 +94,21 @@
 		currentUrl = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
 		NavigationManager.LocationChanged += OnLocationChanged;
 
-		await GetAdminList();
+		//await GetAdminList();
 	}
 
 	protected bool IsThisAdminUser(string userName)
-	{
-		var isadmin = Admins.ToList().Exists(x => x == userName);
-		
-		return isadmin;
-	}
-
-	protected void GetUserAdminStatus()
-	{			
+	{		
 		AuthState = AuthStateProvider
 					.GetAuthenticationStateAsync()
 					.GetAwaiter()
 					.GetResult();
 
-		//var hasAdminClaim = AuthState.User.HasClaim(x => x.Type == "Permission" && x.Value == "Admin");
+		UserIsAdmin = AuthState.User.IsInRole("Admin");
 
-		var userName = AuthState?.User?.Identity?.Name;
-		
-		UserIsAdmin = Admins.ToList().Exists(x => x == userName);
-
+		return UserIsAdmin;
 	}
 
-	private async Task GetAdminList()
-	{
-		var url = Http.BaseAddress + $"api/Admin/users";
-
-		var admins = await Http.GetFromJsonAsync<IEnumerable<string>>(url);
-
-		Admins = admins ?? new List<string>();
-	}
 		
 	private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
 	{

@@ -49,6 +49,7 @@ C:\dp\FastCarSales\FastCarSales.MapperConfigurations\obj\Debug\net8.0\FastCarSal
 C:\dp\FastCarSales\FastCarSales.MapperConfigurations\obj\Debug\net8.0\FastCarSales.MapperConfigurations.AssemblyInfoInputs.cache
 C:\dp\FastCarSales\FastCarSales.MapperConfigurations\obj\Debug\net8.0\FastCarSales.MapperConfigurations.AssemblyInfo.cs
 C:\dp\FastCarSales\FastCarSales.MapperConfigurations\obj\Debug\net8.0\FastCarSales.MapperConfigurations.csproj.CoreCompileInputs.cache
+C:\dp\FastCarSales\FastCarSales.MapperConfigurations\obj\Debug\net8.0\FastCarSales.MapperConfigurations.sourcelink.json
 C:\dp\FastCarSales\FastCarSales.MapperConfigurations\obj\Debug\net8.0\FastCarS.263FE466.Up2Date
 C:\dp\FastCarSales\FastCarSales.MapperConfigurations\obj\Debug\net8.0\FastCarSales.MapperConfigurations.dll
 C:\dp\FastCarSales\FastCarSales.MapperConfigurations\obj\Debug\net8.0\refint\FastCarSales.MapperConfigurations.dll

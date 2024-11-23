@@ -8,6 +8,7 @@
 	using Data;
 	using Data.Models;
 	using FastCarSales.Data.Dtos;
+	using Microsoft.EntityFrameworkCore.Storage;
 
 	public class ImagesService : IImagesService
 	{
@@ -51,7 +52,7 @@
 			return dbImage;
 		}
 
-		public bool DeleteImage(string fileName, string imageRootDirectoryPath)
+		public bool DeleteImageFromPhysicalFile(string fileName, string imageRootDirectoryPath, IDbContextTransaction transaction)
 		{
 			try
 			{
@@ -73,6 +74,26 @@
 				throw;
 			}
 			
+		}
+
+		public bool DeleteImages(List<Image> images, string imageRootDirectoryPath, IDbContextTransaction transaction)
+		{
+			try
+			{
+				foreach(Image image in images)
+				{
+					var imageToRemove = this.data.Images.First(img => img.Id == image.Id);
+					this.data.Images.Remove(imageToRemove);
+					this.DeleteImageFromPhysicalFile(imageToRemove.Id + "." + imageToRemove.Extension, imageRootDirectoryPath: imageRootDirectoryPath, transaction: transaction);
+				}
+
+				return true;
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
 		}
 
 		public async Task SetCoverImagePropertyAsync(string imageId)

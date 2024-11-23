@@ -11,7 +11,7 @@
 
 
 	<div class="d-flex float-left col-md-3" style="position: absolute; z-index:1000; top:50px; right:40px width:300px">		
-		<input class="form-control" @bind="SearchText" placeholder="Mercedes, Mercedes S-Class, Golf 5 GTI, etc..." style="height:40px" @onkeydown="BeginSearch">		
+		<input id="SearchInput" class="form-control" @bind="SearchText" placeholder="Mercedes, Mercedes S-Class, Golf 5 GTI, etc..." style="height:40px" @onkeydown="BeginSearch">		
 		<a href="/searchresults?searchText=@SearchText" style="text-decoration:none"
 		<span class="btn btn-light d-flex justify-content-center align-items-center" style="position:relative; left:-45px; height:38px" >
 			<i class="fas fa-search" />
@@ -185,6 +185,36 @@
 		}
 	</div>
 </div>
+
+<script>
+	// document.addEventListener('DOMContentLoaded', function () {
+	// 	var searchInput = document.getElementById('SearchInput');
+	// 	if (searchInput) {
+	// 		searchInput.addEventListener('keydown', function (event) {
+	// 			if (event.key === "Enter") {
+	// 				DotNet.invokeMethodAsync('FastCarSales.Client', 'BeginSearch', event.key)
+	// 					.then(data => {
+	// 						console.log(data);
+	// 					});
+	// 			}
+	// 		});
+	// 	}
+	// });
+
+	document.addEventListener('DOMContentLoaded', function () {
+		var searchInput = document.getElementById('SearchInput');
+		if (searchInput) {
+			searchInput.addEventListener('change', function (event) {				
+				DotNet.invokeMethodAsync('FastCarSales.Client', 'SearchChanged', event.key)
+					.then(data => {
+						console.log(data);
+					});
+				
+			});
+		}
+	});
+</script>
+
 @*
     <script>
         $(document).ready(function () {

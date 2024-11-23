@@ -1,7 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\dp\\FastCarSales\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|c:\\dp\\fastcarsales\\fastcarsales.client\\pages\\posts\\singlepostview.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|solutionrelative:fastcarsales.client\\pages\\posts\\singlepostview.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|c:\\dp\\fastcarsales\\fastcarsales.client\\pages\\posts\\searchandresults.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|solutionrelative:fastcarsales.client\\pages\\posts\\searchandresults.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|c:\\dp\\fastcarsales\\fastcarsales.client\\pages\\posts\\mine.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|solutionrelative:fastcarsales.client\\pages\\posts\\mine.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|c:\\dp\\fastcarsales\\fastcarsales.client\\pages\\posts\\allpostsbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|solutionrelative:fastcarsales.client\\pages\\posts\\allpostsbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|c:\\dp\\fastcarsales\\fastcarsales.client\\pages\\posts\\resultspane.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|solutionrelative:fastcarsales.client\\pages\\posts\\resultspane.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|c:\\dp\\fastcarsales\\fastcarsales.client\\layout\\topnavmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|solutionrelative:fastcarsales.client\\layout\\topnavmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|c:\\dp\\fastcarsales\\fastcarsales.client\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{514A0028-7BFA-4BB8-9B15-CA5AE2090FBA}|FastCarSales.Client\\FastCarSales.Client.csproj|solutionrelative:fastcarsales.client\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 171,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +55,97 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SinglePostView.razor",
+              "DocumentMoniker": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Pages\\Posts\\SinglePostView.razor",
+              "RelativeDocumentMoniker": "FastCarSales.Client\\Pages\\Posts\\SinglePostView.razor",
+              "ToolTip": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Pages\\Posts\\SinglePostView.razor",
+              "RelativeToolTip": "FastCarSales.Client\\Pages\\Posts\\SinglePostView.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T06:39:56.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mine.razor",
+              "DocumentMoniker": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Pages\\Posts\\Mine.razor",
+              "RelativeDocumentMoniker": "FastCarSales.Client\\Pages\\Posts\\Mine.razor",
+              "ToolTip": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Pages\\Posts\\Mine.razor",
+              "RelativeToolTip": "FastCarSales.Client\\Pages\\Posts\\Mine.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T06:39:39.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SearchAndResults.razor",
+              "DocumentMoniker": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Pages\\Posts\\SearchAndResults.razor",
+              "RelativeDocumentMoniker": "FastCarSales.Client\\Pages\\Posts\\SearchAndResults.razor",
+              "ToolTip": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Pages\\Posts\\SearchAndResults.razor",
+              "RelativeToolTip": "FastCarSales.Client\\Pages\\Posts\\SearchAndResults.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T06:30:08.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResultsPane.razor",
+              "DocumentMoniker": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Pages\\Posts\\ResultsPane.razor",
+              "RelativeDocumentMoniker": "FastCarSales.Client\\Pages\\Posts\\ResultsPane.razor",
+              "ToolTip": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Pages\\Posts\\ResultsPane.razor",
+              "RelativeToolTip": "FastCarSales.Client\\Pages\\Posts\\ResultsPane.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T06:29:55.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AllPostsBase.cs",
+              "DocumentMoniker": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Pages\\Posts\\AllPostsBase.cs",
+              "RelativeDocumentMoniker": "FastCarSales.Client\\Pages\\Posts\\AllPostsBase.cs",
+              "ToolTip": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Pages\\Posts\\AllPostsBase.cs",
+              "RelativeToolTip": "FastCarSales.Client\\Pages\\Posts\\AllPostsBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T06:29:03.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TopNavMenu.razor",
+              "DocumentMoniker": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Layout\\TopNavMenu.razor",
+              "RelativeDocumentMoniker": "FastCarSales.Client\\Layout\\TopNavMenu.razor",
+              "ToolTip": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Layout\\TopNavMenu.razor",
+              "RelativeToolTip": "FastCarSales.Client\\Layout\\TopNavMenu.razor",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAFYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T06:21:12.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "FastCarSales.Client\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\dp\\FastCarSales\\FastCarSales.Client\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "FastCarSales.Client\\Layout\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T06:21:00.841Z",
+              "EditorCaption": ""
             }
           ]
         },

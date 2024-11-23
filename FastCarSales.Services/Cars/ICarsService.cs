@@ -23,10 +23,13 @@
 
         IEnumerable<CarExtrasServiceModel> GetAllCarExtras();
 		BaseCarPropertyListsDTO FillInputCarBaseProperties();
-		Task UpdateCarDataFromInputModelAsync(int carId, CarFormInputModelDTO inputCar, List<int> selectedExtrasIds, List<string> deletedImagesIds, string userId, string imagePath, string SelectedCoverImageId);
+		
+		Task UpdateCarDataFromInputModelAsync(int carId, CarFormInputModelDTO inputCar, List<int> selectedExtrasIds,
+				List<string> deletedImagesIds, string userId, string imagePath, string selectedCoverImageId);
 
 		Task DeleteCarByIdAsync(int carId, IDbContextTransaction transaction);
 		Task RestoreDeletedCar(int carId, IDbContextTransaction transaction);
+		Task EmptyRecycleBinAsync(int carId, string imageRootDirectoryPath, IDbContextTransaction transaction);
 
 	}
 }

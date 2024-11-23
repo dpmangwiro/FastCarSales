@@ -188,6 +188,7 @@ C:\dp\FastCarSales\FastCarSales\obj\Debug\net8.0\FastCarSales.AssemblyInfoInputs
 C:\dp\FastCarSales\FastCarSales\obj\Debug\net8.0\FastCarSales.AssemblyInfo.cs
 C:\dp\FastCarSales\FastCarSales\obj\Debug\net8.0\FastCarSales.csproj.CoreCompileInputs.cache
 C:\dp\FastCarSales\FastCarSales\obj\Debug\net8.0\FastCarSales.MvcApplicationPartsAssemblyInfo.cache
+C:\dp\FastCarSales\FastCarSales\obj\Debug\net8.0\FastCarSales.sourcelink.json
 C:\dp\FastCarSales\FastCarSales\obj\Debug\net8.0\staticwebassets.build.json
 C:\dp\FastCarSales\FastCarSales\obj\Debug\net8.0\staticwebassets.development.json
 C:\dp\FastCarSales\FastCarSales\obj\Debug\net8.0\staticwebassets\msbuild.FastCarSales.Microsoft.AspNetCore.StaticWebAssets.props

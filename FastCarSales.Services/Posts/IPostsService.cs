@@ -44,6 +44,8 @@
         string GetPostCreatorId(int postId);
 
         Task DeletePostByIdAsync(int postId);
+
+		Task EmptyRecycleBinAsync(int postId, string imageRootDirectoryPath);
 		Task RestoreDeletedPost(int postId);
 
 	}

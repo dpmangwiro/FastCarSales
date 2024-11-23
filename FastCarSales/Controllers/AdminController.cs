@@ -78,12 +78,31 @@ namespace FastCarSales.Controllers
             return true;
         }
 
-		[HttpDelete("{id:int}")]
+		[HttpDelete("restore/{id:int}")]
 		public async Task<ActionResult<bool>> RestoreDeletedPost(int id)
 		{
 			await this.PostsService.RestoreDeletedPost(id);
 
 			return true;
+		}
+
+		[HttpDelete("{id:int}")]
+		public async Task<ActionResult<bool>> EmptyRecycleBin(int id)
+		{
+            try
+            {
+				var imageRootDirectoryPath = $"{Environment.ContentRootPath}/wwwroot/images";
+				imageRootDirectoryPath = imageRootDirectoryPath.Replace("FastCarSales\\FastCarSales", "FastCarSales\\FastCarSales.Client");
+
+				await this.PostsService.EmptyRecycleBinAsync(id, imageRootDirectoryPath);
+
+				return true;
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting car: " + ex.Message);
+			}
+			
 		}
 
 		[HttpPut]

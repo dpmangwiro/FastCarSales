@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "FastCarSales.Client",
   "resources": {
-    "hash": "sha256-MXVL71IYO0FSNBVTcifKREb7uOBmTCPrQsG9zOf6r5M=",
+    "hash": "sha256-xYrxBVRDDt5P57NUJL5OG7q1J0kRw/Kji6BhilJX0uI=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.93i67mqfmb.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -260,28 +260,28 @@
       "mscorlib.wasm": "sha256-Gz8PyW2/fwihe5ul81OwmRUrU71r+KtbyRw6xlOGD+Q=",
       "netstandard.wasm": "sha256-jMTqIQzoDS810lyhZpMO5eEC36EzntXqSVn+2qwkOMQ=",
       "System.Private.CoreLib.wasm": "sha256-NFj5WE5VLP2LptZIRJCUIc1AMk06FmxpsSILfPISwAw=",
-      "FastCarSales.ComponentModels.wasm": "sha256-UkBNua7e7tscSdO12xo2L9OxPuYcC50tKW04BtMqM88=",
-      "FastCarSales.CustomAttributes.wasm": "sha256-8zZrNIpyA1gu/e1CaKtPoPky+5HcD8v4aSTSWchl/wM=",
-      "FastCarSales.Data.Constants.wasm": "sha256-aNrGhnJ1e8MEKh+kqOnVN4KVhUK+Buk0mZgdidnMJzU=",
-      "FastCarSales.Data.wasm": "sha256-3GStCd8NB8PGC2VltSqFS+RPHJLkx/EBix2bFxwntvY=",
-      "FastCarSales.Data.Dtos.wasm": "sha256-sEfwCCNmXS9N0RXK5bJbHJdYJRng2uqXtaXd8X9T3cc=",
-      "FastCarSales.Data.Models.wasm": "sha256-v22Y3kRKPB4s4L+aS4GRbBr4+At0K4eSqVi1lpHVVqk=",
-      "FastCarSales.GlobalConstants.wasm": "sha256-VK3ifAXDBrs+C5b8wwGe73L0C9WSuyznnUbwfvp/TEM=",
-      "FastCarSales.MapperConfigurations.wasm": "sha256-m5s8m6yW5JxmN3URgxnAy4TFXMAsM0yPVpR5GIAPpt8=",
-      "FastCarSales.Services.wasm": "sha256-0VuvJVmjZFQID4ZKhVCicKuIIEBnHvSmGgy8lloAI2M=",
-      "FastCarSales.Client.wasm": "sha256-YJKa++HWbuT73jcKtCv9Yw+SFZ/NlE+yDXhnL2MI1cA="
+      "FastCarSales.ComponentModels.wasm": "sha256-qqkCwceK5g/xGjE8hmBmdAUgtMWi8RqSCTUpJFCXrX0=",
+      "FastCarSales.CustomAttributes.wasm": "sha256-sHaQoeKFBxi8qUvlJksbzMa2Q2f2d5vzJfjGF1jZ23o=",
+      "FastCarSales.Data.Constants.wasm": "sha256-YUXb2sMjp3W5YmqbueIOacoSKaJzflK3abYpmodT1J0=",
+      "FastCarSales.Data.wasm": "sha256-SYPKaJkGmh2cES8tdFYde/TF5HHbO3kuL2N+oVSOPK8=",
+      "FastCarSales.Data.Dtos.wasm": "sha256-tRU34vUO5zmjhxD2NsxG7Arxt4t2mmKsZdsTnC1Re9k=",
+      "FastCarSales.Data.Models.wasm": "sha256-zes9OYlQOyx+YdbBwelomXLAfekQnNE4SScphVl2xMk=",
+      "FastCarSales.GlobalConstants.wasm": "sha256-AUTl4mipS4jelTrClPv1jgdxykXpzLxX91tlua1WMkM=",
+      "FastCarSales.MapperConfigurations.wasm": "sha256-ExpjOOv4G0jk3fmZI/Y8J9PILtrdCXMxwYSSRDZjdcQ=",
+      "FastCarSales.Services.wasm": "sha256-R0JV1N5g5/ttVGBntuREH1RhOhRUIe4vEbQdMmjVD+Q=",
+      "FastCarSales.Client.wasm": "sha256-USFRhfWieqKeNmjF3S+fBlQCToVIEP/r3WSU6ovIYRo="
     },
     "pdb": {
-      "FastCarSales.MapperConfigurations.pdb": "sha256-AivgLQAWn1tqBad/yTlix5T9wF8oGebg5887lQ1iBWA=",
-      "FastCarSales.ComponentModels.pdb": "sha256-ilAPircSIG78uCCK4h8Ewaae8duqrNtg0jMW8/gHFdg=",
-      "FastCarSales.CustomAttributes.pdb": "sha256-e6le0+1Jb7RWGvXZ0CGDUf9jz93+iiF1n/7gyWtn9u0=",
-      "FastCarSales.Data.pdb": "sha256-76MAhcxtdXNA6unQlx2KqvPi5birWo56uMd7GZKW+eg=",
-      "FastCarSales.Data.Constants.pdb": "sha256-mtuRUpMn7DpcH08dJRiI3rQOzvA5cMyOdy65QinplIA=",
-      "FastCarSales.Data.Dtos.pdb": "sha256-1tYme2XmPXRikfPalAm03h1bGWMtTEgQVOU8M1gnoE8=",
-      "FastCarSales.Data.Models.pdb": "sha256-VxqlJpHsWjA6MCV7l8f1KVwiGGCO9rnjJJybvCfwhVY=",
-      "FastCarSales.GlobalConstants.pdb": "sha256-WvxHAF09W7XyXsvEPEKjld4x9eQiTX0D36t5jNyFVNc=",
-      "FastCarSales.Services.pdb": "sha256-zXFSf+wUY13FV+9GDi8MlakSsNsoW4iuNgn+2b9t0p0=",
-      "FastCarSales.Client.pdb": "sha256-Y1OmXu6aFz5K1Ahx5QHUR7cmz0ipOtCy7whUTNvZn+M="
+      "FastCarSales.MapperConfigurations.pdb": "sha256-iAi7Bf4GkFMlcX4GNMLVq1TQ+PAzUq35oFykXAWq0BU=",
+      "FastCarSales.ComponentModels.pdb": "sha256-asGGKnXpMVxVaR1f4kgfh9WXkqknOW/5DGfNiBehVEc=",
+      "FastCarSales.CustomAttributes.pdb": "sha256-JjJIbXrNUukYlcoUUac8LTFmnA0hwkUIxw2zgArO3rk=",
+      "FastCarSales.Data.pdb": "sha256-9Hs0tuiSvCTFriLbjlTcMD8EXAUDN88SOgmIrqSl950=",
+      "FastCarSales.Data.Constants.pdb": "sha256-2ZQwg/v51kz9kcCcF3gOA7Y9eiBjs9GllrQgbUMOVAk=",
+      "FastCarSales.Data.Dtos.pdb": "sha256-J2+/jkW3PYa5Zx/BXBtPn6RDXYsfCTats7u13cuS45M=",
+      "FastCarSales.Data.Models.pdb": "sha256-/vqz9IHArxOghGiTJFyevW4TeecQ3eQt815L1YgPvg8=",
+      "FastCarSales.GlobalConstants.pdb": "sha256-L6XTQBRzhLY/3ibBKPEOWR4pfAFNFF2Nz+face7gn7k=",
+      "FastCarSales.Services.pdb": "sha256-NZRsy61f1PMFqxZ8A0efDLLDjlhC8wH+jcD0omWdRKc=",
+      "FastCarSales.Client.pdb": "sha256-DI5hunBz5HJpnq97nHoUfVJPZH3+FOqHniUNCRWvirM="
     }
   },
   "cacheBootResources": true,

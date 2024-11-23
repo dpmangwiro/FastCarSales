@@ -16,6 +16,7 @@ C:\dp\FastCarSales\FastCarSales.Data.Dtos\obj\Debug\net8.0\FastCarSales.Data.Dto
 C:\dp\FastCarSales\FastCarSales.Data.Dtos\obj\Debug\net8.0\FastCarSales.Data.Dtos.AssemblyInfoInputs.cache
 C:\dp\FastCarSales\FastCarSales.Data.Dtos\obj\Debug\net8.0\FastCarSales.Data.Dtos.AssemblyInfo.cs
 C:\dp\FastCarSales\FastCarSales.Data.Dtos\obj\Debug\net8.0\FastCarSales.Data.Dtos.csproj.CoreCompileInputs.cache
+C:\dp\FastCarSales\FastCarSales.Data.Dtos\obj\Debug\net8.0\FastCarSales.Data.Dtos.sourcelink.json
 C:\dp\FastCarSales\FastCarSales.Data.Dtos\obj\Debug\net8.0\FastCarSales.Data.Dtos.dll
 C:\dp\FastCarSales\FastCarSales.Data.Dtos\obj\Debug\net8.0\refint\FastCarSales.Data.Dtos.dll
 C:\dp\FastCarSales\FastCarSales.Data.Dtos\obj\Debug\net8.0\FastCarSales.Data.Dtos.pdb

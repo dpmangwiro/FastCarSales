@@ -1,4 +1,5 @@
-﻿using FastCarSales.Web.ViewModels.Posts;
+﻿using BlazorBootstrap;
+using FastCarSales.Web.ViewModels.Posts;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using System.Net.Http.Json;
@@ -7,7 +8,13 @@ namespace FastCarSales.Client.Pages.Posts
 {
     public class AllPostsBase: ComponentBase
     {
-        [Inject] HttpClient Http { get; set; } = null!;
+		protected List<BreadcrumbItem> BreadcrumbItems = new List<BreadcrumbItem>()
+		{
+			new BreadcrumbItem{Text = "Home", Href="/"},
+			new BreadcrumbItem{Text = "Buy", Href="/allposts", IsCurrentPage= true}
+		};
+
+		[Inject] HttpClient Http { get; set; } = null!;
         [Inject] IJSRuntime jSRuntime { get; set; } = null!;
         public SearchPostInputModel? SearchModel { get; set; } = new SearchPostInputModel();
         public PostsListViewModel? PostsModel { get; set; } = new PostsListViewModel();

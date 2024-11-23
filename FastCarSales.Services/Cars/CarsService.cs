@@ -90,108 +90,123 @@ namespace FastCarSales.Services.Cars
 			}
 		}
 
-		public async Task UpdateCarDataFromInputModelAsync(int carId, CarFormInputModelDTO inputCar, List<int> selectedExtrasIds, List<string> deletedImagesIds, string userId, string imagePath, string selectedCoverImageId)
+		public async Task UpdateCarDataFromInputModelAsync(int carId, CarFormInputModelDTO inputCar, List<int> selectedExtrasIds,
+				List<string> deletedImagesIds, string userId, string imagePath, string selectedCoverImageId)
 		{
-			var car = this.GetDbCarById(carId);
-
-			if (car == null)
+			using (var transaction = await this.data.Database.BeginTransactionAsync())
 			{
-				throw new Exception($"Unfortunately, such car in our system doesn't exist!");
-			}
-
-			car.MakeId = inputCar.MakeId;
-			car.CarModelId = inputCar.CarModelId;
-			car.Description = inputCar.Description;
-			car.BodyTypeId = inputCar.BodyTypeId;
-			car.FuelTypeId = inputCar.FuelTypeId;
-			car.TransmissionTypeId = inputCar.TransmissionTypeId;
-			car.Year = inputCar.Year ?? 0;
-			car.Kilometers = inputCar.Kilometers ?? 0;
-			car.EngineCapacity = inputCar.EngineCapacity ?? 0;
-			car.Price = inputCar.Price ?? 0;
-			car.LocationCity = inputCar.LocationCity;
-			car.LocationTown = inputCar.LocationTown;
-
-			if (selectedExtrasIds.Any())
-			{
-				var currentExtrasIds = this.data.CarExtras.Where(ce => ce.CarId == carId).Select(ce => ce.ExtraId).ToList();
-
-				foreach (var extraId in selectedExtrasIds)
+				try
 				{
-					var extra = this.data.Extras.FirstOrDefault(e => e.Id == extraId);
 
-					if (extra != null && !currentExtrasIds.Contains(extraId))
+					var car = this.GetDbCarById(carId);
+
+					if (car == null)
 					{
-						car.CarExtras.Add(new CarExtra
+						throw new Exception($"Unfortunately, such car in our system doesn't exist!");
+					}
+
+					car.MakeId = inputCar.MakeId;
+					car.CarModelId = inputCar.CarModelId;
+					car.Description = inputCar.Description;
+					car.BodyTypeId = inputCar.BodyTypeId;
+					car.FuelTypeId = inputCar.FuelTypeId;
+					car.TransmissionTypeId = inputCar.TransmissionTypeId;
+					car.Year = inputCar.Year ?? 0;
+					car.Kilometers = inputCar.Kilometers ?? 0;
+					car.EngineCapacity = inputCar.EngineCapacity ?? 0;
+					car.Price = inputCar.Price ?? 0;
+					car.LocationCity = inputCar.LocationCity;
+					car.LocationTown = inputCar.LocationTown;
+
+					if (selectedExtrasIds.Any())
+					{
+						var currentExtrasIds = this.data.CarExtras.Where(ce => ce.CarId == carId).Select(ce => ce.ExtraId).ToList();
+
+						foreach (var extraId in selectedExtrasIds)
 						{
-							Extra = extra,
-							Car = car,
-						});
+							var extra = this.data.Extras.FirstOrDefault(e => e.Id == extraId);
+
+							if (extra != null && !currentExtrasIds.Contains(extraId))
+							{
+								car.CarExtras.Add(new CarExtra
+								{
+									Extra = extra,
+									Car = car,
+								});
+							}
+						}
+
+						if (selectedExtrasIds.Count() < currentExtrasIds.Count())
+						{
+							var deletedExtrasIds = currentExtrasIds.Where(extraId => !selectedExtrasIds.Contains(extraId)).ToList();
+
+							foreach (var deletedExtraId in deletedExtrasIds)
+							{
+								var deletedCarExtra = this.data.CarExtras.First(ce => ce.CarId == carId && ce.ExtraId == deletedExtraId);
+
+								this.data.CarExtras.Remove(deletedCarExtra);
+							}
+						}
 					}
-				}
 
-				if (selectedExtrasIds.Count() < currentExtrasIds.Count())
-				{
-					var deletedExtrasIds = currentExtrasIds.Where(extraId => !selectedExtrasIds.Contains(extraId)).ToList();
+					var inCarNewImages = inputCar.Images;
 
-					foreach (var deletedExtraId in deletedExtrasIds)
+					var dbExistingImages = this.data.Images.Where(img => img.CarId == carId).ToList();
+
+					if (deletedImagesIds.Count() >= dbExistingImages.Count() && !inputCar.Images.Any())
 					{
-						var deletedCarExtra = this.data.CarExtras.First(ce => ce.CarId == carId && ce.ExtraId == deletedExtraId);
-
-						this.data.CarExtras.Remove(deletedCarExtra);
+						throw new Exception($"You cannot delete all car images. At least one car image is required for each post.");
 					}
-				}
-			}
 
-			var inCarNewImages = inputCar.Images;
-			
-			var dbExistingImages = this.data.Images.Where(img => img.CarId == carId).ToList();
-
-			if (deletedImagesIds.Count() >= dbExistingImages.Count() && !inputCar.Images.Any())
-			{
-				throw new Exception($"You cannot delete all car images. At least one car image is required for each post.");
-			}
-
-			if (deletedImagesIds.Any())
-			{
-				foreach (var deletedImageId in deletedImagesIds)
-				{
-					if (dbExistingImages.Any(img => img.Id == deletedImageId))
+					if (deletedImagesIds.Any())
 					{
-						var imageToRemove = this.data.Images.First(img => img.Id == deletedImageId);
-						this.data.Images.Remove(imageToRemove);
-						imagesService.DeleteImage(imageToRemove.Id + "." + imageToRemove.Extension, imageRootDirectoryPath: imagePath);
+						foreach (var deletedImageId in deletedImagesIds)
+						{
+							if (dbExistingImages.Any(img => img.Id == deletedImageId))
+							{
+								var imageToRemove = this.data.Images.First(img => img.Id == deletedImageId);
+								this.data.Images.Remove(imageToRemove);
+								imagesService.DeleteImageFromPhysicalFile(imageToRemove.Id + "." + imageToRemove.Extension, imageRootDirectoryPath: imagePath, transaction: transaction);
+							}
+						}
 					}
-				}
-			}							
-			
-			if (inCarNewImages != null)
-			{
-				if (inCarNewImages.Count() + dbExistingImages.Count() > 10)
-				{
-					throw new Exception($"The maximum allowed number of car images is 10.");
-				}
 
-				foreach (var image in inCarNewImages)
-				{
-					var dbImage = await this.imagesService.UploadImageAsync(image, userId, imagePath);
-					car.Images.Add(dbImage);
+					if (inCarNewImages != null)
+					{
+						if (inCarNewImages.Count() + dbExistingImages.Count() > 10)
+						{
+							throw new Exception($"The maximum allowed number of car images is 10.");
+						}
+
+						foreach (var image in inCarNewImages)
+						{
+							var dbImage = await this.imagesService.UploadImageAsync(image, userId, imagePath);
+							car.Images.Add(dbImage);
+						}
+					}
+
+					var oldCoverImageId = dbExistingImages.FirstOrDefault(x => x.IsCoverImage)?.Id;
+
+					if (string.IsNullOrEmpty(oldCoverImageId) || oldCoverImageId != selectedCoverImageId)
+					{
+						await this.imagesService.SetCoverImagePropertyAsync(selectedCoverImageId!);
+
+						if (!string.IsNullOrEmpty(oldCoverImageId))
+						{
+							await this.imagesService.RemoveCoverImagePropertyAsync(oldCoverImageId);
+						}
+					}
+
+					await this.data.SaveChangesAsync();
+
+					await transaction.CommitAsync();
 				}
-			}					
-						
-			var oldCoverImageId = dbExistingImages.FirstOrDefault(x => x.IsCoverImage)?.Id;
-
-			if (string.IsNullOrEmpty(oldCoverImageId) || oldCoverImageId != selectedCoverImageId)
-			{
-				await this.imagesService.SetCoverImagePropertyAsync(selectedCoverImageId!);
-
-				if (!string.IsNullOrEmpty(oldCoverImageId))
+				catch (Exception)
 				{
-					await this.imagesService.RemoveCoverImagePropertyAsync(oldCoverImageId);
-				}				
+					await transaction.RollbackAsync();
+					throw;
+				}
 			}
-			
-			await this.data.SaveChangesAsync();
 		}
 
 		public async Task DeleteCarByIdAsync(int carId, IDbContextTransaction transaction)
@@ -209,9 +224,27 @@ namespace FastCarSales.Services.Cars
 			await this.data.SaveChangesAsync();
 		}
 
+		public async Task EmptyRecycleBinAsync(int carId, string imageRootDirectoryPath ,IDbContextTransaction transaction)
+		{
+			var carExists = this.data.Cars.ToList().Exists(c => c.Id == carId);
+
+			if (carExists == false)
+			{
+				throw new Exception("Car does not exist in this post");
+			}
+
+			var images = this.data.Cars.First(x => x.Id == carId).Images.ToList();
+
+			imagesService.DeleteImages(images, imageRootDirectoryPath, transaction);
+
+			this.data.Cars.Remove(this.data.Cars.First(x => x.Id == carId));
+
+			await this.data.SaveChangesAsync();
+		}
+
 		public async Task RestoreDeletedCar(int carId, IDbContextTransaction transaction)
 		{
-			var car = this.GetDbCarById(carId);
+			var car = this.data.Cars.FirstOrDefault(c => c.Id == carId);
 
 			if (car is null)
 			{
@@ -252,7 +285,7 @@ namespace FastCarSales.Services.Cars
 		public IEnumerable<CarModel> GetCarModels()
 		{
 			return this.data
-				.CarModels				
+				.CarModels
 				.ToList();
 		}
 

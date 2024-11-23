@@ -3,6 +3,10 @@
 
 @inherits AllPostsBase
 
+<div>
+	<Breadcrumb Items="BreadcrumbItems"></Breadcrumb>
+</div>
+
 @if (PostsModel is null || PostsModel.Posts.Count() == 0)
 {
 <div>

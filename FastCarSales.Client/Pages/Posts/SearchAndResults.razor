@@ -4,6 +4,10 @@
 
 @inherits SearchAndResultsBase
 
+<div>
+	<Breadcrumb Items="BreadcrumbItems"></Breadcrumb>
+</div>
+
 <!--two panes-->
 @* <div class="container-fluid" style="height: 100vh;">
 	<div class="d-flex col-md-12 justify-content-between" style="height: 100%;">
@@ -19,7 +23,7 @@
 
 <!--side bar-->
 
-	<div class="row" style="height: 100%;">
+	@* <div class="row" style="height: 100%;">
 		<div class="col-md-4" style="overflow-y: hidden; height: 100vh; position: fixed;">
 			<SearchPane ></SearchPane>
 		</div>
@@ -28,4 +32,15 @@
 			<ResultsPane ></ResultsPane>
 		</div>
 	</CascadingValue>
+	</div> *@
+
+<div class="row" style="height: 100%;">
+	<div class="col-md-4" style="overflow-y: hidden;  position: fixed;">
+		<SearchPane></SearchPane>
 	</div>
+	<CascadingValue Value="this" Name="ParentComponent">
+		<div class="col-md-8 offset-md-4">
+			<ResultsPane></ResultsPane>
+		</div>
+	</CascadingValue>
+</div>

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FastCarSales")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f93fcaf502f67404051060adea38a01c22804685")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ef02b1f60ec7a920f9df2660c0c8a9b59a69dfd")]
 [assembly: System.Reflection.AssemblyProductAttribute("FastCarSales")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FastCarSales")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

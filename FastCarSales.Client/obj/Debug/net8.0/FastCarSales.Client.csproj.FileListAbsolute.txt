@@ -825,6 +825,7 @@ C:\dp\FastCarSales\FastCarSales.Client\obj\Debug\net8.0\FastCarSales.Client.Asse
 C:\dp\FastCarSales\FastCarSales.Client\obj\Debug\net8.0\FastCarSales.Client.AssemblyInfo.cs
 C:\dp\FastCarSales\FastCarSales.Client\obj\Debug\net8.0\FastCarSales.Client.csproj.CoreCompileInputs.cache
 C:\dp\FastCarSales\FastCarSales.Client\obj\Debug\net8.0\FastCarSales.Client.MvcApplicationPartsAssemblyInfo.cache
+C:\dp\FastCarSales\FastCarSales.Client\obj\Debug\net8.0\FastCarSales.Client.sourcelink.json
 C:\dp\FastCarSales\FastCarSales.Client\obj\Debug\net8.0\webcil\AutoMapper.wasm
 C:\dp\FastCarSales\FastCarSales.Client\obj\Debug\net8.0\webcil\Azure.Core.wasm
 C:\dp\FastCarSales\FastCarSales.Client\obj\Debug\net8.0\webcil\Azure.Identity.wasm

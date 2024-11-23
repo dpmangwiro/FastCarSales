@@ -11,12 +11,17 @@ using FastCarSales.Client.Pages.Posts;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Components.Web;
 using System.Text;
+using BlazorBootstrap;
 
 
 namespace FastCarSales.Client.Pages
 {
 	public class HomeBase : ComponentBase, IDisposable
 	{
+		protected List<BreadcrumbItem> BreadcrumbItems = new List<BreadcrumbItem>()
+		{			
+			new BreadcrumbItem{Text = "Home", Href="/", IsCurrentPage= true}
+		};
 		[Inject] HttpClient Http { get; set; } = null!;
 		[Inject] IMapper Mapper { get; set; } = null!;
 		[Inject] IJSRuntime jSRuntime { get; set; } = null!;
@@ -69,12 +74,20 @@ namespace FastCarSales.Client.Pages
 
 			StateHasChanged();
 		}
-
+				
 		protected void BeginSearch(KeyboardEventArgs args)
 		{			
-			StateHasChanged();
+			//StateHasChanged();
 			if (args.Key.ToString() != "Enter") { return; }
 			if (string.IsNullOrEmpty(SearchText)) { return;}
+
+			NavigationManager.NavigateTo($"/searchresults?searchText={SearchText}");
+		}
+
+		[JSInvokable]
+		protected void Searchchanged()
+		{			
+			if (string.IsNullOrEmpty(SearchText)) { return; }
 
 			NavigationManager.NavigateTo($"/searchresults?searchText={SearchText}");
 		}

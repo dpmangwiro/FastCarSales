@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using Data.Models;
     using FastCarSales.Data.Dtos;
+	using Microsoft.EntityFrameworkCore.Storage;
 
     public interface IImagesService
     {
@@ -16,7 +17,9 @@
         string GetDefaultCarImagesPath(string imageId, string imageExtension);
 
         string GetCoverImagePath(ICollection<Image> carImages);
-		bool DeleteImage(string fileName, string imageRootDirectoryPath);
+		bool DeleteImageFromPhysicalFile(string fileName, string imageRootDirectoryPath, IDbContextTransaction transaction);
+
+		bool DeleteImages(List<Image> images, string imageRootDirectoryPath, IDbContextTransaction transaction);
 
 	}
 }

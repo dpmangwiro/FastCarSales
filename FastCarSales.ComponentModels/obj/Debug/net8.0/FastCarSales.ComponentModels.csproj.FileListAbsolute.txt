@@ -31,6 +31,7 @@ C:\dp\FastCarSales\FastCarSales.ComponentModels\obj\Debug\net8.0\FastCarSales.Co
 C:\dp\FastCarSales\FastCarSales.ComponentModels\obj\Debug\net8.0\FastCarSales.ComponentModels.AssemblyInfoInputs.cache
 C:\dp\FastCarSales\FastCarSales.ComponentModels\obj\Debug\net8.0\FastCarSales.ComponentModels.AssemblyInfo.cs
 C:\dp\FastCarSales\FastCarSales.ComponentModels\obj\Debug\net8.0\FastCarSales.ComponentModels.csproj.CoreCompileInputs.cache
+C:\dp\FastCarSales\FastCarSales.ComponentModels\obj\Debug\net8.0\FastCarSales.ComponentModels.sourcelink.json
 C:\dp\FastCarSales\FastCarSales.ComponentModels\obj\Debug\net8.0\FastCarS.1BEB1E0B.Up2Date
 C:\dp\FastCarSales\FastCarSales.ComponentModels\obj\Debug\net8.0\FastCarSales.ComponentModels.dll
 C:\dp\FastCarSales\FastCarSales.ComponentModels\obj\Debug\net8.0\refint\FastCarSales.ComponentModels.dll

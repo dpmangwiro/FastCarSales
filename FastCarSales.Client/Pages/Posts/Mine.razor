@@ -3,6 +3,10 @@
 
 @inherits MineBase
 
+<div>
+    <Breadcrumb Items="BreadcrumbItems"></Breadcrumb>
+</div>
+
 <h1 class="text-center"> "Your Posts" @(MyPostsView.PagesCount > 1 ? $", page {MyPostsView.PageNumber}" : string.Empty)</h1>
 
 @if (!MyPostsView.Posts.Any())

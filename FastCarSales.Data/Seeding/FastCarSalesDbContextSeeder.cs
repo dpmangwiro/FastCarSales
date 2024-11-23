@@ -26,8 +26,8 @@
                 new ExtraTypesSeeder(),
                 new FuelTypesSeeder(),
                 new TransmissionTypesSeeder(),
-                new CarModelSeeder()
-                //new AdministratorSeeder()
+                new CarModelSeeder(),
+                new RoleSeeder()
             };
 
             foreach (var seeder in seeders)

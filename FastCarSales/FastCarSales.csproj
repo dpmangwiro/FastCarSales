@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="wwwroot\scripts\yearPicker.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\site.css" />
   </ItemGroup>
 
   <ItemGroup>

@@ -4,9 +4,12 @@
 
 @inherits DeletePostBase
 
+<div>
+	<Breadcrumb Items="BreadcrumbItems"></Breadcrumb>
+</div>
+
 @if (MyPostView is null || (MyPostView is not null && MyPostView.Car.Id ==  0))
 {
-
 	<p>Loading...</p>
 }
 else
@@ -40,12 +43,12 @@ else
 	
 	<div class="d-flex justify-content-center my-3">
 		<div class="mx-2">
-			<Button Class="btn btn-danger" @onclick="DeletePost">Delete</Button>
+			<Button Class="btn btn-danger" @onclick="DeletePostManager">Delete</Button>
 		</div>
 		<div class="mx-2">
 			@if (UserIsAdmin)
 			{
-				<a href="/allposts" class="btn btn-dark">Cancel</a>
+				<a href="/postsadmin" class="btn btn-dark">Cancel</a>
 			}
 			else
 			{

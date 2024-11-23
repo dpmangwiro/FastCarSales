@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BlazorBootstrap;
 using FastCarSales.Services.Cars;
 using FastCarSales.Services.Posts;
 using FastCarSales.Services.Posts.Models;
@@ -14,7 +15,12 @@ namespace FastCarSales.Client.Pages.Posts
 {
 	public class MineBase : ComponentBase
 	{
-		
+		protected List<BreadcrumbItem> BreadcrumbItems = new List<BreadcrumbItem>()
+		{
+			new BreadcrumbItem{Text = "Home", Href="/"},
+			new BreadcrumbItem{Text = "My Posts", Href="/mine", IsCurrentPage= true}
+		};
+
 		[Inject] HttpClient Http { get; set; } = null!;
 		
 		protected PostsByUserViewModel? MyPostsView = new PostsByUserViewModel();

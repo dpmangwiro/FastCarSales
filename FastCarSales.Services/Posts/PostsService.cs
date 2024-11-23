@@ -704,6 +704,47 @@
 			}
 		}
 
+		public async Task EmptyRecycleBinAsync(int postId, string imageRootDirectoryPath)
+		{
+			using (var transaction = await this.data.Database.BeginTransactionAsync())
+			{
+				try
+				{
+					if (this.data.Posts is null)
+					{
+						throw new Exception($"No posts exist!");
+					}
+
+					var postExists = this.data.Posts!.ToList().Exists(p => p.Id == postId && p.IsDeleted);									
+
+					if (postExists == false)
+					{
+						throw new Exception($"Unfortunately, we cannot find such post in our system!");
+					}
+
+					var carId = data.Posts?.First(x => x.Id == postId).CarId;
+
+					if (carId == null || carId.Value <= 0)
+					{
+						throw new Exception($"This post has no car!");
+					}
+										
+					this.data.Posts!.Remove(this.data.Posts.First(x=> x.Id == postId));
+
+					await this.data.SaveChangesAsync();
+
+					await this.carsService.EmptyRecycleBinAsync(carId.Value, imageRootDirectoryPath, transaction);
+
+					await transaction.CommitAsync();
+				}
+				catch (Exception)
+				{
+					await transaction.RollbackAsync();
+					throw;
+				}
+			}
+		}
+
 		public async Task RestoreDeletedPost(int postId)
 		{
 			using (var transaction = await this.data.Database.BeginTransactionAsync())
